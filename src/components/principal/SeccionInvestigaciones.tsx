@@ -7,8 +7,10 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { useTranslations } from 'next-intl'
 
 const SeccionInvestigaciones = () => {
+  const t = useTranslations('Investigaciones');
   return (
     
           <section className="flex gap-5">
@@ -21,12 +23,12 @@ const SeccionInvestigaciones = () => {
                 WebkitMaskRepeat: "no-repeat",
                 WebkitMaskSize: "100% 100%",
               }}>
-                <h3 className="text-lime-500 mb-10 flex items-center"><LuBrain className="mr-2 text-xl" /> Últimas investigaciones:</h3>
-                <p className="text-white"><span className="text-pink-600 font-bold">{'>'}</span> Investigación sobre sistemas RAG {'(Retrieval-Augmented Generation)'}.</p>
-                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> Inversión de tokens OpenAI para integración de proveedor y utlización de modelos.</p>
-                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> Investigación y acercamiento a N8N.</p>
-                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> Investigación de LangChain.</p>
-                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> Investigación e integración de IA SDK Vercel con Next.js</p>
+                <h3 className="text-lime-500 mb-10 flex items-center"><LuBrain className="mr-2 text-xl" />{t("titulo")}</h3>
+                <p className="text-white"><span className="text-pink-600 font-bold">{'>'}</span> {t("item1")}</p>
+                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> {t("item2")}</p>
+                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> {t("item3")}</p>
+                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> {t("item4")}</p>
+                <p className="text-white mt-4"><span className="text-pink-600 font-bold">{'>'}</span> {t("item5")}</p>
                 <div className="mt-10 flex justify-center gap-7 pb-5">
                   <Tooltip>
                     <TooltipTrigger>

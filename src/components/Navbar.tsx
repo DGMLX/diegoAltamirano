@@ -17,9 +17,11 @@ import {
 } from "@/components/ui/tooltip"
 import { ModeToggle } from "./ModeToggle";
 import { SidebarTrigger } from "./ui/sidebar";
-
+import SeleccionIdioma from "./SeleccionIdioma";
+import { useTranslations } from 'next-intl'
 
 const Navbar = () => {
+  const t = useTranslations('Navbar');
   return (
     <>
 
@@ -36,12 +38,16 @@ const Navbar = () => {
 
   {/* Navbar */}  
   <nav className="flex-1 text-gray-400 bg-[#272730] flex items-center justify-center gap-7 text-lg">
-    <Link href={"/#"} className=" text-white transition-all duration-400">Sobre mi</Link>
-    <Link href={"/#trayectoria"} className="hover:text-white transition-all duration-400">Trayectoria</Link>
-    <Link href={"/#servicios"} className="hover:text-white transition-all duration-400">Servicios</Link>
-    <Link href={"/#proyectos"} className="hover:text-white transition-all duration-400">Proyectos realizados</Link>
-    <Link href={"/#contacto"} className="hover:text-white transition-all duration-400">Contacto</Link>
+    <Link href={"/#"} className=" text-white transition-all duration-400">{t("sobreMi")}</Link>
+    <Link href={"/#trayectoria"} className="hover:text-white transition-all duration-400">{t("trayectoria")}</Link>
+    <Link href={"/#servicios"} className="hover:text-white transition-all duration-400">{t("servicios")}</Link>
+    <Link href={"/#proyectos"} className="hover:text-white transition-all duration-400">{t("proyectosRealizados")}</Link>
+    <Link href={"/#contacto"} className="hover:text-white transition-all duration-400">{t("contacto")}</Link>
   </nav>
+
+    <div className="flex items-center pr-5 bg-[#272730]">
+      <SeleccionIdioma/>
+    </div>
 
 
 

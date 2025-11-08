@@ -1,0 +1,136 @@
+{
+  "Navbar": {
+    "sobreMi": "About me",
+    "trayectoria": "Career path",
+    "servicios": "Services",
+    "proyectosRealizados": "Completed projects",
+    "contacto": "Contact"
+  },
+  "SobreMi": {
+    "span": "Hi, I'm Diego Altamirano",
+    "titulo": "Software Developer",
+    "descripcion": "With knowledge in modern technologies such as Next.js, Tailwind, React, SQL, Vercel, and more. I offer web solutions that are both innovative and modern."
+  },
+  "Info": {
+    "horasPractica": "Hours of practice",
+    "proyectosRealizados": "Completed projects",
+    "lineasCodigo": "Lines of code",
+    "repositorios": "Repositories on GitHub"
+  },
+  "Investigaciones": {
+    "titulo": "Latest research:",
+    "item1": "Research on RAG systems (Retrieval-Augmented Generation).",
+    "item2": "Investment of OpenAI tokens for provider integration and model usage.",
+    "item3": "Research and exploration of N8N.",
+    "item4": "Research on LangChain.",
+    "item5": "Research and integration of Vercel AI SDK with Next.js."
+  },
+  "Trayectoria": {
+    "Educacion": {
+      "titulo":"Education",
+      "curso1": {
+        "lugar": "Duoc UC Institute",
+        "titulo": "Diploma in Web Development"
+      },
+      "curso2": {
+        "lugar": "Udemy",
+        "titulo": "Modern JavaScript Course"
+      },
+      "curso3": {
+        "lugar": "Udemy",
+        "titulo": "React JS Course"
+      },
+      "curso4": {
+        "lugar": "Udemy",
+        "titulo": "Next JS Framework Course"
+      },
+      "curso5": {
+        "lugar": "Duoc UC Institute",
+        "titulo": "Programming Analyst Technician"
+      }
+    },
+    "Experiencia": {
+      "titulo":"Work Experience",
+      "titulo1": "Website development",
+      "titulo2": "Website development",
+      "titulo3": "Programming Analyst Internship"
+    }
+  },
+ "Servicios": {
+  "titulo1": "Skills",
+  "titulo2": "Knowledge and technologies I apply in my projects.",
+  "Cards": {
+    "item1": {
+      "titulo": "Web Development",
+      "descripcion": "Creation of visually appealing and user-friendly interfaces using HTML, CSS, TailwindCSS, and modern frameworks like <highlight>React and NextJS</highlight>."
+    },
+    "item2": {
+      "titulo": "Layout and Responsiveness",
+      "descripcion": "Transformation of designs into functional and responsive layouts, ensuring visual consistency, spacing, and adaptability to <highlight>mobile, tablet, and desktop screens</highlight>."
+    },
+    "item3": {
+      "titulo": "Database ETL",
+      "descripcion": "Development of queries and structures in <highlight>SQL</highlight> to store, filter, and analyze data."
+    },
+    "item4": {
+      "titulo": "AI Integration",
+      "descripcion": "Integration of artificial intelligence solutions into web applications, developing <highlight>chatbots</highlight> with memory and real-time responses through streaming."
+    },
+    "item5": {
+      "titulo": "API and Library Integration",
+      "descripcion": "Implementation and consumption of external <highlight>APIs and libraries</highlight> to integrate advanced functionalities."
+    },
+    "item6": {
+      "titulo": "Application Deployment",
+      "descripcion": "Deployment of web projects on <highlight>Vercel</highlight> and database management through <highlight>Vercel Storage</highlight>."
+    }
+  }
+},
+  "ProyectoActual": {
+    "titulo": "Current Project",
+    "descripcion": "LexifyAI is a web application powered by artificial intelligence designed to transform the way people learn languages. It combines contextual translation with interactive conversations.",
+    "boton":"View Demo"
+  },
+  "ProyectosRealizados": {
+  "titulo": "Completed Projects",
+  "subtitulo": "Recently",
+  "Proyectos": {
+    "proyecto1": {
+      "fecha": "Last update - October 2025",
+      "titulo": "Nutrition Services",
+      "descripcion": "Project built with Next.js, focused on providing a modern interface for nutrition services. Integrates artificial intelligence through a specialized chatbot and an authentication system that allows generating personalized plans according to user requirements.",
+      "boton": "Visit Project"
+    },
+    "proyecto2": {
+      "fecha": "Last update - August 2025",
+      "titulo": "Community Management",
+      "descripcion": "Project built with Next.js, centered on creating a responsive interface for community management. Implements clean design principles, reusable components, and performance optimization.",
+      "boton": "Visit Project"
+    },
+    "proyecto3": {
+      "fecha": "Last update - July 2025",
+      "titulo": "Shadcn Interface",
+      "descripcion": "Project focused on understanding the architecture and customization of Shadcn/UI. Implemented various components and styles to become familiar with its integration in modern Next.js environments.",
+      "boton": "Visit Project"
+    }
+  }
+},
+"Contacto": {
+  "titulo":"Contact",
+  "Formulario": {
+    "labelNombre": "Your Name",
+    "labelTelefono": "Contact Number",
+    "labelCorreo": "example@email.com",
+    "labelAsunto": "Subject",
+    "labelMensaje": "Message",
+    "boton": "Send Message"
+  },
+ "Info": {
+    "numero": "Contact Number",
+    "email": "Email",
+    "ubicacion": "Location"
+  }
+}
+
+
+}

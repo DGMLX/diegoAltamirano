@@ -6,26 +6,28 @@ import { CiPhone } from "react-icons/ci";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { FiMapPin } from "react-icons/fi";
+import { useTranslations } from 'next-intl';
 
 
 const SeccionContacto = () => {
+  const t = useTranslations("Contacto")
   return (
     <section className='mb-20'>
-        <h2 className='text-lime-400 text-2xl'>Contacto</h2>
+        <h2 className='text-lime-400 text-2xl'>{t("titulo")}</h2>
         <div className='flex '>
 
           <div className='mt-10 w-2/3'>
               <form action="">
                   <div className='flex gap-x-3'>
-                      <Input placeholder='Tu nombre' className='mt-3'/>
-                      <Input placeholder='Número de contacto' className='mt-3'/>
+                      <Input placeholder={t("Formulario.labelNombre")} className='mt-3'/>
+                      <Input placeholder={t("Formulario.labelTelefono")} className='mt-3'/>
                   </div>
                   <div className='flex  gap-x-3'>
-                      <Input type='email' placeholder='example@correo.com' className='mt-3'/>
-                      <Input placeholder='Asunto' className='mt-3'/>           
+                      <Input type='email' placeholder={t("Formulario.labelCorreo")} className='mt-3'/>
+                      <Input placeholder={t("Formulario.labelAsunto")} className='mt-3'/>           
                   </div>
-                  <Textarea placeholder="Mensaje" className='mt-3' />
-                  <Button className='mt-5 cursor-pointer'>Enviar mensaje</Button>
+                  <Textarea placeholder={t("Formulario.labelMensaje")} className='mt-3' />
+                  <Button className='mt-5 cursor-pointer'>{t("Formulario.boton")}</Button>
               </form>
 
           </div>
@@ -36,7 +38,7 @@ const SeccionContacto = () => {
 
                 </div>
                 <div>
-                  <p className='text-sm text-zinc-500'>Número de contacto</p>
+                  <p className='text-sm text-zinc-500'>{t("Info.numero")}</p>
                   <p>+56954714609</p>
                 </div>
               </div>
@@ -46,7 +48,7 @@ const SeccionContacto = () => {
                   <MdOutlineAttachEmail className='text-3xl text-lime-500'/>
                 </div>
                 <div>
-                  <p className='text-sm text-zinc-500'>Email</p>
+                  <p className='text-sm text-zinc-500'>{t("Info.email")}</p>
                   <p>diegoaltdev@gmail.com</p>
                 </div>
               </div>
@@ -66,7 +68,7 @@ const SeccionContacto = () => {
                   <FiMapPin className='text-3xl text-lime-500'/>
                 </div>
                 <div>
-                  <p className='text-sm text-zinc-500'>Ubicación</p>
+                  <p className='text-sm text-zinc-500'>{t("Info.ubicacion")}</p>
                   <p>Chile - Viña del mar</p>
                 </div>
               </div>

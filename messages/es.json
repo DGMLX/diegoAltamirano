@@ -1,0 +1,135 @@
+{
+    "Navbar":{
+        "sobreMi":"Sobre mi",
+        "trayectoria":"Trayectoria",
+        "servicios":"Servicios",
+        "proyectosRealizados":"Proyectos realizados",
+        "contacto":"Contacto"
+    },
+    "SobreMi":{
+        "span":"Hola, soy Diego Altamirano",
+        "titulo":"Desarrollador de software",
+        "descripcion":"Con conocimientos en tecnologías modernas como Next.js, Tailwind, React, SQL, Vercel y más. Ofrezco soluciones web que son tanto innovadoras como modernas."
+    },
+    "Info":{
+        "horasPractica":"Horas de práctica",
+        "proyectosRealizados":"Proyectos realizados",
+        "lineasCodigo":"Lineas de código",
+        "repositorios":"Repositorios en Github"
+    },
+    "Investigaciones":{
+        "titulo":"Últimas investigaciones:",
+        "item1":"Investigación sobre sistemas RAG (Retrieval-Augmented Generation).",
+        "item2":"Inversión de tokens OpenAI para integración de proveedor y utlización de modelos.",
+        "item3":"Investigación y acercamiento a N8N.",
+        "item4":"Investigación de LangChain.",
+        "item5":"Investigación e integración de IA SDK Vercel con Next.js"
+    },
+    "Trayectoria":{
+        "Educacion":{
+            "titulo":"Educación",
+            "curso1":{
+                "lugar":"Instituto Duoc UC",
+                "titulo":"Diplomadoen desarrollo web"
+            },
+            "curso2":{
+                "lugar":"Udemy",
+                "titulo":"Curso Javascript Moderno"
+            },
+            "curso3":{
+                "lugar":"Udemy",
+                "titulo":"Curso React JS"
+            },
+            "curso4":{
+                "lugar":"Udemy",
+                "titulo":"Curso Framework Next JS"
+            },
+            "curso5":{
+                "lugar":"Instituto Duoc UC",
+                "titulo":"Técnico Analista programador"
+            }
+        },
+        "Experiencia":{
+            "titulo":"Experiencia",
+            "titulo1":"Desarrollo de sitio web",
+            "titulo2":"Desarrollo de sitio web",
+            "titulo3":"Práctica profesional Analista programador"
+        }
+    },
+    "Servicios": {
+  "titulo1": "Habilidades",
+  "titulo2": "Conocimientos y tecnologías que aplico en mis proyectos.",
+  "Cards": {
+    "item1": {
+      "titulo": "Desarrollo de sitios web",
+      "descripcion": "Creación de interfaces visualmente atractivas y fáciles de usar utilizando HTML, CSS, TailwindCSS y frameworks modernos como <highlight>React y NextJS</highlight>."
+    },
+    "item2": {
+      "titulo": "Maquetación y responsividad",
+      "descripcion": "Transformación de diseños en maquetas funcionales y responsivas, cuidando la coherencia visual, el espaciado y la adaptabilidad a <highlight>pantallas móviles, tablet y escritorio</highlight>."
+    },
+    "item3": {
+      "titulo": "ETL Base de datos",
+      "descripcion": "Desarrollo de consultas y estructuras en <highlight>SQL</highlight> para almacenar, filtrar y analizar datos."
+    },
+    "item4": {
+      "titulo": "Integración de IA",
+      "descripcion": "Integración de soluciones de inteligencia artificial en aplicaciones web, desarrollando <highlight>chatbots</highlight> con memoria y respuestas en tiempo real mediante streaming."
+    },
+    "item5": {
+      "titulo": "Cosumo de librerías y APIs",
+      "descripcion": "Implementación y consumo de <highlight>APIs y librerías</highlight> externas para integrar funcionalidades avanzadas."
+    },
+    "item6": {
+      "titulo": "Despliegue de aplicaciones",
+      "descripcion": "Despliegue de proyectos web en <highlight>Vercel</highlight> y gestión de bases de datos mediante <highlight>Vercel Storage</highlight>."
+    }
+  }
+},
+
+    "ProyectoActual":{
+        "titulo":"Proyecto Actual",
+        "descripcion":"LexifyAI es una aplicación web impulsada por inteligencia artificial diseñada para transformar la forma en que las personas aprenden idiomas. Combina traducción contextual y conversaciones interactivas.",
+        "boton":"Ver Demo"
+    },
+    "ProyectosRealizados":{
+        "titulo":"Proyectos realizados",
+        "subtitulo":"recientemente",
+        "Proyectos":{
+            "proyecto1":{
+                "fecha":"Última actualización - Octubre 2025",
+                "titulo":"Servicios de nutrición",
+                "descripcion":"Proyecto construido con Next.js, enfocado en ofrecer una interfaz moderna para servicios de nutrición. Integra inteligencia artificial mediante un chatbot especializado y un sistema de autenticación que permite generar planes personalizados según los requerimientos del usuario.",
+                "boton":"Visitar proyecto"
+            },
+            "proyecto2":{
+                "fecha":"Última actualización - Agosto 2025",
+                "titulo":"Administración de comunidades",
+                "descripcion":"Proyecto construido con Next.js, centrado en la creación de una interfaz adaptable para la administración de comunidades. Implementa principios de diseño limpio, componentes reutilizables y optimización en rendimiento.",
+                "boton":"Visitar proyecto"
+            },
+            "proyecto3":{
+                "fecha":"Última actualización - Julio 2025",
+                "titulo":"Interfaz Shadcn",
+                "descripcion":"Proyecto enfocado en comprender la arquitectura y personalización de Shadcn/UI. Implementé diferentes componentes y estilos para familiarizarme con su integración en entornos modernos de Next.js.",
+                "boton":"Visitar proyecto"
+            }
+        }
+    },
+    "Contacto":{
+        "titulo":"Contacto",
+        "Formulario":{
+            "labelNombre":"Tu nombre",
+            "labelTelefono":"Número de contacto",
+            "labelCorreo":"example@correo.com",
+            "labelAsunto":"Asunto",
+            "labelMensaje":"Mensaje",
+            "boton":"Enviar mensaje"
+        },
+         "Info":{
+            "numero":"Número de contacto",
+            "email":"Email",
+            "ubicacion":"Ubicación"
+        }
+    }
+}

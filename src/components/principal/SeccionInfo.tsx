@@ -1,8 +1,10 @@
+import { useTranslations } from 'next-intl';
 import React from 'react'
 import { FaCode, FaGithubAlt, FaRegCheckCircle } from 'react-icons/fa'
 import { IoMdTimer } from 'react-icons/io'
 
 const SeccionInfo = () => {
+  const t = useTranslations('Info');
   return (
     <section className="bg-[#272730] mb-10 px-14 py-20 bg-center bg-cover flex justify-around text-white border rounded-xl border-zinc-600 "    style={{
     backgroundImage: `
@@ -16,22 +18,22 @@ const SeccionInfo = () => {
         <div>
           <IoMdTimer className="text-lime-500 text-3xl"/>
           <p className="text-center text-4xl">+250</p>
-          <p className="">Horas de práctica</p>
+          <p className="">{t("horasPractica")}</p>
         </div>
         <div>
           <FaRegCheckCircle  className="text-lime-500 text-3xl"/>
           <p className="text-center text-4xl">+10</p>
-          <p>Proyectos realizados</p>
+          <p>{t("proyectosRealizados")}</p>
         </div>
         <div>
           <FaCode className="text-lime-500 text-3xl"/>
           <p className="text-center text-4xl">+1000</p>
-          <p>Líneas de código</p>
+          <p>{t("lineasCodigo")}</p>
         </div>
         <div>
           <FaGithubAlt className="text-lime-500 text-3xl"/>
           <p className="text-center text-4xl">+25</p>
-          <p>Repositorios en GitHub</p>
+          <p>{t("repositorios")}</p>
         </div>
       </section>
   )

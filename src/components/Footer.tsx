@@ -3,8 +3,10 @@ import React from 'react'
 import { FaCode, FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 import { SiGmail } from 'react-icons/si'
+import { useTranslations } from 'next-intl'
 
 const Footer = () => {
+    const t = useTranslations("Navbar")
   return (
     <footer className='pb-10'>
         <hr className='mb-5'/>
@@ -32,11 +34,11 @@ const Footer = () => {
         </div>
 
          <nav className="flex-1 text-gray-400 mt-5 text-sm flex items-center justify-center gap-5 ">
-            <Link href={"/#sobreMi"} className=" hover:text-white transition-all duration-400">Sobre mi</Link>
-            <Link href={"/#trayectoria"} className="hover:text-white transition-all duration-400">Trayectoria</Link>
-            <Link href={"/#servicios"} className="hover:text-white transition-all duration-400">Servicios</Link>
-            <Link href={"/#proyectos"} className="hover:text-white transition-all duration-400">Proyectos realizados</Link>
-            <Link href={"/#contacto"} className="hover:text-white transition-all duration-400">Contacto</Link>
+            <Link href={"/#sobreMi"} className=" hover:text-white transition-all duration-400">{t("sobreMi")}</Link>
+            <Link href={"/#trayectoria"} className="hover:text-white transition-all duration-400">{t("trayectoria")}</Link>
+            <Link href={"/#servicios"} className="hover:text-white transition-all duration-400">{t("servicios")}</Link>
+            <Link href={"/#proyectos"} className="hover:text-white transition-all duration-400">{t("proyectosRealizados")}</Link>
+            <Link href={"/#contacto"} className="hover:text-white transition-all duration-400">{t("contacto")}</Link>
         </nav>
         
     </footer>

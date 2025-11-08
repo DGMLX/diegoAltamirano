@@ -6,6 +6,8 @@ import { Fira_Code } from 'next/font/google'
 import { ThemeProvider } from "@/components/theme-provider"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/AppSidebar";
+import {NextIntlClientProvider} from 'next-intl';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,15 +47,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarProvider>
-            {/* Sidebar lateral */}
-            <AppSidebar />
-            {/* 🔹 Contenedor principal en columna */}
-            <div className="flex flex-col w-full">
-              <Navbar />
-             {children}
-            </div>
-          </SidebarProvider>
+          <NextIntlClientProvider>
+
+            <SidebarProvider>
+              {/* Sidebar lateral */}
+              <AppSidebar />
+              {/* 🔹 Contenedor principal en columna */}
+              <div className="flex flex-col w-full">
+                <Navbar />
+              {children}
+              </div>
+            </SidebarProvider>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
