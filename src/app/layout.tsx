@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Fira_Code } from 'next/font/google'
+import { ThemeProvider } from "@/components/theme-provider"
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/AppSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +39,22 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable} antialiased bg-no-repeat`}
        style={{backgroundImage: `url('/fondo.png')`}}
       >
-
-        <Navbar/>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SidebarProvider>
+            {/* Sidebar lateral */}
+            <AppSidebar />
+            {/* 🔹 Contenedor principal en columna */}
+            <div className="flex flex-col w-full">
+              <Navbar />
+             {children}
+            </div>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
