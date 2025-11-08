@@ -130,7 +130,12 @@
     "email": "Email",
     "ubicacion": "Location"
   }
-}
+},
+  "Idiomas":{
+      "idioma":"Language",
+        "español":"Spanish",
+        "ingles":"English"
+    }
 
 
 }

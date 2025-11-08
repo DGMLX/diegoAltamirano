@@ -42,7 +42,7 @@ const SeccionProyectos = () => {
                     <Image src={"/tech/langchain-color.png"} alt="logo langcahin" className="bg-white rounded-full" width={30} height={30}/>
                 </div>
                 <div className="flex gap-10">
-                    <button className="flex items-center cursor-pointer bg-white text-black py-1 px-2 rounded-full hover:bg-zinc-300 text-sm"><BsArrowUpRight className="mr-2"/>{t("boton")}</button>
+                    <Link href={"https://lexify-ia.vercel.app/"} target='_blank' className="flex items-center cursor-pointer bg-white text-black py-1 px-2 rounded-full hover:bg-zinc-300 text-sm"><BsArrowUpRight className="mr-2"/>{t("boton")}</Link>
                 </div>
                 </div>
             </div>
