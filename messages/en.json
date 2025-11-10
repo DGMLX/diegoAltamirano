@@ -135,7 +135,14 @@
       "idioma":"Language",
         "español":"Spanish",
         "ingles":"English"
-    }
+    },
+    "Sidebar": {
+  "titulo": "Get in touch",
+  "descripcion": "I'm always excited to take on new projects, collaborate with innovative minds, and expand my knowledge.",
+  "numeroContacto": "Contact number",
+  "ubicacion": "Location",
+  "redes": "Social media"
+}
 
 
 }

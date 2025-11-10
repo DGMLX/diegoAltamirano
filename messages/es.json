@@ -136,5 +136,12 @@
         "idioma":"Idioma",
         "español": "Español",
         "ingles": "Inglés"
+    },
+    "Sidebar":{
+        "titulo":"Ponte en contacto",
+        "descripcion":"Siempre estoy motivado por asumir nuevos proyectos y colaborar con mentes innovadoras.",
+        "numeroContacto":"Número de contacto",
+        "ubicacion":"Ubicación",
+        "redes":"Redes sociales"
     }
 }
