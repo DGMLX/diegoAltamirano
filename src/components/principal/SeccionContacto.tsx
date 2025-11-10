@@ -2,82 +2,80 @@ import React from 'react'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 import { Button } from '../ui/button'
-import { CiPhone } from "react-icons/ci";
-import { MdOutlineAttachEmail } from "react-icons/md";
-import { FiGithub } from "react-icons/fi";
-import { FiMapPin } from "react-icons/fi";
-import { useTranslations } from 'next-intl';
-
+import { CiPhone } from "react-icons/ci"
+import { MdOutlineAttachEmail } from "react-icons/md"
+import { FiGithub, FiMapPin } from "react-icons/fi"
+import { useTranslations } from 'next-intl'
 
 const SeccionContacto = () => {
   const t = useTranslations("Contacto")
+
   return (
-    <section className='mb-20'>
-        <h2 className='text-lime-400 text-2xl'>{t("titulo")}</h2>
-        <div className='flex '>
+    <section className="mb-20 px-5">
+      <h2 className="text-lime-400 text-2xl">{t("titulo")}</h2>
 
-          <div className='mt-10 w-2/3'>
-              <form action="">
-                  <div className='flex gap-x-3'>
-                      <Input placeholder={t("Formulario.labelNombre")} className='mt-3'/>
-                      <Input placeholder={t("Formulario.labelTelefono")} className='mt-3'/>
-                  </div>
-                  <div className='flex  gap-x-3'>
-                      <Input type='email' placeholder={t("Formulario.labelCorreo")} className='mt-3'/>
-                      <Input placeholder={t("Formulario.labelAsunto")} className='mt-3'/>           
-                  </div>
-                  <Textarea placeholder={t("Formulario.labelMensaje")} className='mt-3' />
-                  <Button className='mt-5 cursor-pointer'>{t("Formulario.boton")}</Button>
-              </form>
+      {/* Contenedor principal */}
+      <div className="flex flex-col items-center lg:flex-row mt-10 gap-10">
 
-          </div>
-            <div className='w-1/3 ml-5'>
-              <div className='flex items-center'>
-                <div className='border p-3 mr-3 bg-zinc-800 rounded-md'>
-                  <CiPhone className='text-3xl text-lime-500'/>
-
-                </div>
-                <div>
-                  <p className='text-sm text-zinc-500'>{t("Info.numero")}</p>
-                  <p>+56954714609</p>
-                </div>
-              </div>
-
-              <div className='flex items-center mt-3'>
-                 <div className='border p-3 mr-3 bg-zinc-800 rounded-md'>
-                  <MdOutlineAttachEmail className='text-3xl text-lime-500'/>
-                </div>
-                <div>
-                  <p className='text-sm text-zinc-500'>{t("Info.email")}</p>
-                  <p>diegoaltdev@gmail.com</p>
-                </div>
-              </div>
-
-              <div className='flex items-center mt-3'>
-                 <div className='border p-3 mr-3 bg-zinc-800 rounded-md'>
-                  <FiGithub className='text-3xl text-lime-500'/>
-                </div>
-                <div>
-                  <p className='text-sm text-zinc-500'>Github</p>
-                  <p>DGMLX</p>
-                </div>
-              </div>
-
-              <div className='flex items-center mt-3'>
-                <div className='border p-3 mr-3 bg-zinc-800 rounded-md'>
-                  <FiMapPin className='text-3xl text-lime-500'/>
-                </div>
-                <div>
-                  <p className='text-sm text-zinc-500'>{t("Info.ubicacion")}</p>
-                  <p>Chile - Viña del mar</p>
-                </div>
-              </div>
-
-              
+        {/* Formulario */}
+        <div className="w-full lg:w-2/3">
+          <form className="w-full">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Input placeholder={t("Formulario.labelNombre")} className="mt-3 flex-1" />
+              <Input placeholder={t("Formulario.labelTelefono")} className="mt-3 flex-1" />
             </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Input type="email" placeholder={t("Formulario.labelCorreo")} className="mt-3 flex-1" />
+              <Input placeholder={t("Formulario.labelAsunto")} className="mt-3 flex-1" />
+            </div>
+
+            <Textarea placeholder={t("Formulario.labelMensaje")} className="mt-3 min-h-[150px]" />
+            <Button className="mt-5 w-full sm:w-auto">{t("Formulario.boton")}</Button>
+          </form>
         </div>
+
+        {/* Información de contacto */}
+        <div className="w-full lg:w-1/3 space-y-4">
+          <ContactInfo
+            icon={<CiPhone className="text-3xl text-lime-500" />}
+            label={t("Info.numero")}
+            value="+569 54714609"
+          />
+
+          <ContactInfo
+            icon={<MdOutlineAttachEmail className="text-3xl text-lime-500" />}
+            label={t("Info.email")}
+            value="diegoaltdev@gmail.com"
+          />
+
+          <ContactInfo
+            icon={<FiGithub className="text-3xl text-lime-500" />}
+            label="Github"
+            value="DGMLX"
+          />
+
+          <ContactInfo
+            icon={<FiMapPin className="text-3xl text-lime-500" />}
+            label={t("Info.ubicacion")}
+            value="Chile - Viña del Mar"
+          />
+        </div>
+      </div>
     </section>
   )
 }
+
+const ContactInfo = ({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) => (
+  <div className="flex items-center bg-zinc-900 rounded-md p-3 shadow-md">
+    <div className="border border-zinc-700 p-3 mr-3 bg-zinc-800 rounded-md flex items-center justify-center">
+      {icon}
+    </div>
+    <div>
+      <p className="text-sm text-zinc-500">{label}</p>
+      <p className="text-white break-words">{value}</p>
+    </div>
+  </div>
+)
 
 export default SeccionContacto

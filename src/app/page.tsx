@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="mt-10 mx-28  "  >
+    <main className="mt-10 mx-5 md:mx-14  "  >
     <a id="sobreMi"></a>
     <SeccionSobreMi/>
     <SeccionInfo/>

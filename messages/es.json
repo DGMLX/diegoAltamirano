@@ -143,5 +143,10 @@
         "numeroContacto":"Número de contacto",
         "ubicacion":"Ubicación",
         "redes":"Redes sociales"
+    },
+    "Tema":{
+        "claro":"Claro",
+        "oscuro":"Oscuro",
+        "sistema":"Sistema"
     }
 }

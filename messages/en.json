@@ -142,7 +142,12 @@
   "numeroContacto": "Contact number",
   "ubicacion": "Location",
   "redes": "Social media"
-}
+},
+"Tema":{
+        "claro":"Light",
+        "oscuro":"Dark",
+        "sistema":"System"
+    }
 
 
 }
