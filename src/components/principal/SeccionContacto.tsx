@@ -6,10 +6,23 @@ import { CiPhone } from "react-icons/ci"
 import { MdOutlineAttachEmail } from "react-icons/md"
 import { FiGithub, FiMapPin } from "react-icons/fi"
 import { useTranslations } from 'next-intl'
+import { useForm, SubmitHandler } from "react-hook-form"
+
+type Inputs = {
+  nombre: string
+  telefono: string
+  correo:string
+  asunto:string
+  mensaje:string
+}
+
 
 const SeccionContacto = () => {
   const t = useTranslations("Contacto")
-
+  // const {register,handleSubmit,
+  //   watch,
+  //   formState: { errors },
+  // } = useForm<Inputs>()
   return (
     <section className="mb-20 px-5">
       <h2 className="text-lime-400 text-2xl">{t("titulo")}</h2>

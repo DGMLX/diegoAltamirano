@@ -15,11 +15,11 @@ export function AppSidebar() {
   const t = useTranslations("Sidebar")
   return (
     <Sidebar>
-      <SidebarHeader>
+      <SidebarHeader className="hidden md:block">
         <h3 className="mt-5 text-2xl px-5">{t("titulo")}</h3>
         <hr className=" bg-lime-500"/>
       </SidebarHeader>
-      <SidebarContent className="px-5">
+      <SidebarContent className="px-5 hidden md:block">
         <p className=" mt-10 ">{t("descripcion")}</p>
         <div className="mt-10">
 
@@ -46,8 +46,20 @@ export function AppSidebar() {
           </div>
         </div>
       </SidebarContent>
-      <SidebarFooter>
+      <SidebarFooter className="hidden md:block">
         <p className="text-gray-600 text-center pb-5">DGMLX - 2025</p>
+      </SidebarFooter>
+
+
+
+      <SidebarHeader className="block md:hidden">
+        <p>header</p>
+      </SidebarHeader>
+      <SidebarContent className="px-5 block md:hidden">      
+        <p>content</p>
+      </SidebarContent>
+      <SidebarFooter className="block md:hidden">
+        <p>footer</p>
       </SidebarFooter>
     </Sidebar>
   )

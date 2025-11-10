@@ -25,7 +25,7 @@ const SeccionServicios = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {/* CARD 1 */}
         <div className="border border-zinc-700 rounded-xl p-10">
-          <AiOutlineGlobal className="text-2xl text-white mb-4" />
+          <AiOutlineGlobal className="text-2xl text-lime-500 mb-4" />
           <h3 className="text-white text-xl">{t("Cards.item1.titulo")}</h3>
           <p className="text-white mt-4">
             {t.rich("Cards.item1.descripcion", {
@@ -36,7 +36,7 @@ const SeccionServicios = () => {
 
         {/* CARD 2 */}
         <div className="border border-zinc-700 rounded-xl p-10">
-          <MdWeb className="text-white text-2xl mb-4" />
+          <MdWeb className="text-lime-500 text-2xl mb-4" />
           <h3 className="text-white text-xl">{t("Cards.item2.titulo")}</h3>
           <p className="text-white mt-4">
             {t.rich("Cards.item2.descripcion", {
@@ -47,7 +47,7 @@ const SeccionServicios = () => {
 
         {/* CARD 3 */}
         <div className="border border-zinc-700 rounded-xl p-10">
-          <TbDatabase className="text-white text-2xl mb-4" />
+          <TbDatabase className="text-lime-500 text-2xl mb-4" />
           <h3 className="text-white text-xl">{t("Cards.item3.titulo")}</h3>
           <p className="text-white mt-4">
             {t.rich("Cards.item3.descripcion", {
@@ -58,7 +58,7 @@ const SeccionServicios = () => {
 
         {/* CARD 4 */}
         <div className="border border-zinc-700 rounded-xl p-10">
-          <PiRobotDuotone className="text-white text-2xl mb-4" />
+          <PiRobotDuotone className="text-lime-500 text-2xl mb-4" />
           <h3 className="text-white text-xl">{t("Cards.item4.titulo")}</h3>
           <p className="text-white mt-4">
             {t.rich("Cards.item4.descripcion", {
@@ -69,7 +69,7 @@ const SeccionServicios = () => {
 
         {/* CARD 5 */}
         <div className="border border-zinc-700 rounded-xl p-10">
-          <CgInternal className="text-white text-2xl mb-4" />
+          <CgInternal className="text-lime-500 text-2xl mb-4" />
           <h3 className="text-white text-xl">{t("Cards.item5.titulo")}</h3>
           <p className="text-white mt-4">
             {t.rich("Cards.item5.descripcion", {
@@ -80,7 +80,7 @@ const SeccionServicios = () => {
 
         {/* CARD 6 */}
         <div className="border border-zinc-700 rounded-xl p-10">
-          <IoCloudUploadOutline className="text-white text-2xl mb-4" />
+          <IoCloudUploadOutline className="text-lime-500 text-2xl mb-4" />
           <h3 className="text-white text-xl">{t("Cards.item6.titulo")}</h3>
           <p className="text-white mt-4">
             {t.rich("Cards.item6.descripcion", {
