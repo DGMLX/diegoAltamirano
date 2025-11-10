@@ -18,9 +18,8 @@ const SeccionInvestigaciones = () => {
         className="relative bg-[#272730] mb-10 px-8 sm:px-10 md:px-14 pt-10 pb-5 w-full lg:w-3/5 rounded-xl border border-zinc-600"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 20%, black 100%)",
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskSize: "100% 100%",
+            "linear-gradient(to right, transparent 0%, black 0%, black 0%)",
+      
         }}
       >
         <h3 className="text-lime-500 mb-10 flex items-center">
@@ -80,11 +79,7 @@ const SeccionInvestigaciones = () => {
       {/* === Imagen del robot === */}
       <div
         className="bg-[#272730] hidden lg:flex mb-10 px-8 sm:px-10 md:px-14 pt-10 pb-5 w-full lg:w-2/5 rounded-xl border border-zinc-600  justify-center items-center"
-        style={{
-          WebkitMaskImage: 'linear-gradient(to right, black 85%, transparent 100%)',
-          WebkitMaskRepeat: 'no-repeat',
-          WebkitMaskSize: '100% 100%',
-        }}
+      
       >
         <Image
           src={"/robot.svg"}

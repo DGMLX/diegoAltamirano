@@ -11,12 +11,7 @@ const SeccionTrayectoria = () => {
       {/* EDUCACIÓN */}
       <div
         className="bg-[#272730] pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
-        style={{
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 20%, black 100%)",
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskSize: "100% 100%",
-        }}
+        
       >
         <h3 className="text-white text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
           <PiStudent className="mr-2 text-3xl sm:text-4xl text-lime-500" />
@@ -69,11 +64,7 @@ const SeccionTrayectoria = () => {
       {/* EXPERIENCIA */}
       <div
         className="bg-[#272730] pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
-        style={{
-          WebkitMaskImage: 'linear-gradient(to right, black 85%, transparent 100%)',
-          WebkitMaskRepeat: 'no-repeat',
-          WebkitMaskSize: '100% 100%',
-        }}
+        
       >
         <h3 className="text-white text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
           <FaWpforms className="mr-2 text-3xl sm:text-4xl text-lime-500" />

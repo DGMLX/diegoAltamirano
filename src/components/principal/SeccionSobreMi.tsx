@@ -10,23 +10,16 @@ import { useTranslations } from 'next-intl';
 const SeccionSobreMi = () => {
     const t = useTranslations('SobreMi');
   return (
-      <section className=" flex justify-between items-center border border-zinc-600 rounded-xl bg-[#272730]   mb-10 "  style={{
-      
-        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-        WebkitMaskRepeat: 'no-repeat',
-        WebkitMaskSize: '100% 100%',
-      }} >
+      <section className=" flex justify-between items-center border border-zinc-600 rounded-xl bg-[#272730]   mb-10 " >
     
             <Image src={"/developer.svg"} alt="developer-img" width={600} height={600}/>
             <div className="px-16">
     
-              <div className="flex items-center">
-                <span className="text-pink-400 text-xl">{'<'}span{'>'}</span>
-                <p className="text-white text-xl">{t("span")}<span className="animate-blink text-pink-400">|</span></p>
-                <span className="text-pink-400 text-xl">{'</'}span{'>'}</span>
-              </div>    
+              <h2 className="flex items-center text-lg lg:text-xl">
+                <span className="text-pink-400">{'<'}span{'>'}</span><p className="text-white ">{t("span")}<span className="animate-blink text-pink-400">|</span></p><span className="text-pink-400">{'</'}span{'>'}</span>
+              </h2>    
               <h1 className="text-5xl mt-5 text-white font-medium">{t("titulo")}<span className="text-5xl font-medium text-lime-400">{'{Full Stack}'}</span></h1>
-              <p className="text-white mt-5"> <span className="text-pink-400 text-xl">{'<'}p{'>'}</span>{t("descripcion")}<span className="text-pink-400 text-xl">{'</'}p{'>'}</span></p>
+              <p className="text-white mt-5"><span className="text-pink-400 text-xl">{'<'}p{'>'}</span>{t("descripcion")}<span className="text-pink-400 text-xl">{'</'}p{'>'}</span></p>
               <div className="mt-5 flex gap-4">
                    
                 <Tooltip>

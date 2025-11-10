@@ -13,9 +13,7 @@ const SeccionInfo = () => {
           repeating-linear-gradient(0deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px),
           repeating-linear-gradient(90deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px)
         `,
-        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-        WebkitMaskRepeat: 'no-repeat',
-        WebkitMaskSize: '100% 100%',
+     
       }}
     >
       <div className="flex flex-col items-center text-center">

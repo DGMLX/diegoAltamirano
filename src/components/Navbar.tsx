@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
 
- <header className=" mt-10 mx-28  flex items-stretch rounded-xl border-zinc-500 border-t border-l border-r overflow-hidden h-20 shadow-lg shadow-zinc-900" >
+ <header className=" mt-10 mx-5 md:mx-14   flex items-stretch rounded-xl border-zinc-500 border-t border-l border-r overflow-hidden h-20 shadow-lg shadow-zinc-900" >
   {/* Botón menú */}
   <div className="bg-[#32323b] cursor-pointer px-5 flex items-center justify-center">
     <SidebarTrigger className="">

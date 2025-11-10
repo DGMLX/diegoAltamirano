@@ -8,179 +8,164 @@ import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip'
 
-
 const SeccionProyectos = () => {
-    const t = useTranslations("ProyectoActual")
-    const x = useTranslations("ProyectosRealizados")
+  const t = useTranslations("ProyectoActual")
+  const x = useTranslations("ProyectosRealizados")
+
   return (
     <>
-        <section className="bg-[#272730] mb-10 px-14 py-10 bg-center bg-cover  text-white border rounded-xl border-zinc-600 "    style={{
-            backgroundImage: `
+      {/* PROYECTO ACTUAL */}
+      <section
+        className="bg-[#272730] mb-10 px-6 sm:px-10 lg:px-14 py-10 bg-center bg-cover text-white border rounded-xl border-zinc-600"
+        style={{
+          backgroundImage: `
             repeating-linear-gradient(0deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px),
             repeating-linear-gradient(90deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px)
-            `,
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-            WebkitMaskRepeat: 'no-repeat',
-            WebkitMaskSize: '100% 100%',
-        }}>
-            <h3 className="text-lime-500 text-lg font-medium text-center flex items-center"><FaLaptopCode className="mr-2 text-lg text-lime-500"/>{t("titulo")}</h3>
-            <h2 className="text-white text-4xl font-medium m-2">Lexify AI</h2>
-            <div className="border-2 border-zinc-700 mt-7 p-5 flex ">
-                <Image src="/trabajo-reciente/lexifyHome.png" width={600} height={600} alt="LexifyHome" className='hover:scale-105 transition-all duration-500'/>
-                
-                <div className="ml-10 flex-col flex justify-between">
-                <h2>Lexify AI</h2>
-                <p className=" text-zinc-400 text-md">{t("descripcion")}</p>
-                <div className="flex gap-4 ">
-                     <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/logo-nextjs.jpg"} alt="logo nextjs" className="rounded-full" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>NextJS</p>
-                    </TooltipContent>
-                </Tooltip>
+          `
+        }}
+      >
+        <h3 className="text-lime-500 text-lg font-medium text-center flex justify-center items-center">
+          <FaLaptopCode className="mr-2 text-lg text-lime-500" />
+          {t("titulo")}
+        </h3>
 
-                 <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/tailwind.png"} alt="logo tailwind" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Tailwind CSS</p>
-                    </TooltipContent>
-                </Tooltip>
+        <h2 className="text-white text-3xl sm:text-4xl font-medium m-2 text-center sm:text-left">
+          Lexify AI
+        </h2>
 
-                <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/TypeScript.png"} alt="logo typescript" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Typescript</p>
-                    </TooltipContent>
-                </Tooltip>
+        <div className="border-2 border-zinc-700 mt-7 p-5 flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="overflow-hidden rounded-lg w-full lg:w-1/2">
+            <Image
+              src="/trabajo-reciente/lexifyHome.png"
+              width={600}
+              height={600}
+              alt="LexifyHome"
+              className="rounded-lg hover:scale-105 transition-all duration-500 w-full"
+            />
+          </div>
 
-                         <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/Postgresql.png"} alt="logo postgresql" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>PostgreSQL</p>
-                    </TooltipContent>
-                </Tooltip>
+          <div className="mt-8 lg:mt-0 lg:ml-10 flex-col flex justify-between w-full lg:w-1/2">
+            <h2 className="text-2xl font-semibold text-center lg:text-left mb-2">Lexify AI</h2>
+            <p className="text-zinc-400 text-md text-center lg:text-left mb-6">{t("descripcion")}</p>
 
-                <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/prisma.png"} alt="logo prisma" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Prisma</p>
-                    </TooltipContent>
+            {/* Tecnologías */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
+              {[
+                { src: "/tech/logo-nextjs.jpg", alt: "NextJS" },
+                { src: "/tech/tailwind.png", alt: "Tailwind CSS" },
+                { src: "/tech/TypeScript.png", alt: "TypeScript" },
+                { src: "/tech/Postgresql.png", alt: "PostgreSQL" },
+                { src: "/tech/prisma.png", alt: "Prisma" },
+                { src: "/tech/vercel.png", alt: "Vercel" },
+                { src: "/tech/shadcn_logo.png", alt: "Shadcn" },
+                { src: "/tech/openai.png", alt: "OpenAI" },
+                { src: "/tech/langchain-color.png", alt: "Langchain", extra: "bg-white rounded-full" },
+              ].map((tech, i) => (
+                <Tooltip key={i}>
+                  <TooltipTrigger>
+                    <Image
+                      src={tech.src}
+                      alt={tech.alt}
+                      className={`rounded-full ${tech.extra || ''}`}
+                      width={40}
+                      height={40}
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{tech.alt}</p>
+                  </TooltipContent>
                 </Tooltip>
-
-                <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/vercel.png"} alt="logo vercel" className="rounded-full" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Vercel</p>
-                    </TooltipContent>
-                </Tooltip>
-                <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/shadcn_logo.png"} alt="logo shadcn" className="rounded-full" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Shadcn</p>
-                    </TooltipContent>
-                </Tooltip>
-
-                <Tooltip>
-                    <TooltipTrigger>
-                        <Image src={"/tech/openai.png"} alt="logo openai" className="rounded-full" width={40} height={40}/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>OpenAI</p>
-                    </TooltipContent>
-                    </Tooltip>
-
-            <Tooltip>
-                <TooltipTrigger>
-                    <Image src={"/tech/langchain-color.png"} alt="logo langcahin" className="bg-white rounded-full" width={40} height={40}/>
-                </TooltipTrigger>
-                <TooltipContent>
-                    <p>Langchain</p>
-                </TooltipContent>
-                </Tooltip>
-                </div>
-                <div className="flex gap-10">
-                    <Link href={"https://lexify-ia.vercel.app/"} target='_blank' className="flex items-center cursor-pointer bg-white text-black py-1 px-2 rounded-full hover:bg-zinc-300 text-sm"><BsArrowUpRight className="mr-2"/>{t("boton")}</Link>
-                </div>
-                </div>
+              ))}
             </div>
 
-        </section>
-
-        <h3 className="text-center text-4xl text-white mt-20 flex justify-center items-center"><GrProjects className="text-lime-500 text-3xl mr-3"/>{x("titulo")}</h3>
-        <p className="text-center text-lime-500 mt-2">{x("subtitulo")}</p>
-        <section className="mb-20 flex justify-between mt-18"  style={{
-        WebkitMaskImage:
-        'linear-gradient(to right, black 80%, transparent 100%)',
-        WebkitMaskRepeat: 'no-repeat',
-        WebkitMaskSize: '100% 100%',
-    }}>
-        <div className="flex justify-center items-stretch">
-            <div className="bg-[#272730] pt-4 pb-5 w-1/3 rounded-xl border border-zinc-600 px-4 flex flex-col h-full">
-                <div className='overflow-hidden'>
-                    <Image src="/proyectos/nutrihome.png" width={600} height={600} alt="nutricion homepage" className="rounded-lg hover:scale-110 transition-all duration-300" />
-                </div>
-                <p className="text-center mt-4 text-lime-500">{x("Proyectos.proyecto1.fecha")}</p>
-                <h4 className="text-xl text-center text-white mt-2 font-bold">{x("Proyectos.proyecto1.titulo")}</h4>
-                <p className="text-center my-8 text-zinc-400 flex-grow">
-               {x("Proyectos.proyecto1.descripcion")}
-                </p>
-                <Button asChild>
-                    <Link href={"https://proyecto-nutricion-ia.vercel.app/"} target="_blank" className="mt-auto py-2 rounded-xl  w-full flex justify-center items-center hover:bg-zinc-300 cursor-pointer">
-                    <FaRegEye className="mr-3 text-xl"/>{x("Proyectos.proyecto1.boton")}
-                    </Link>
-                </Button>
+            <div className="flex justify-center lg:justify-start">
+              <Link
+                href="https://lexify-ia.vercel.app/"
+                target="_blank"
+                className="flex items-center cursor-pointer bg-white text-black py-1 px-3 rounded-full hover:bg-zinc-300 text-sm"
+              >
+                <BsArrowUpRight className="mr-2" />
+                {t("boton")}
+              </Link>
             </div>
-
-            <div className="bg-[#272730] pt-4 pb-5 w-1/3 mx-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full over">
-                <div className='overflow-hidden'>
-                    <Image src="/proyectos/adminhome.png" width={600} height={600} alt="admin homepage" className=" rounded-lg hover:scale-110 transition-all duration-300" />
-                </div>
-                <p className="text-center mt-4 text-lime-500">{x("Proyectos.proyecto2.fecha")}</p>
-                <h4 className="text-xl text-center text-white mt-2 font-bold">{x("Proyectos.proyecto2.titulo")}</h4>
-                <p className="text-center my-8 text-zinc-400 flex-grow">
-               {x("Proyectos.proyecto2.descripcion")}
-                </p>
-                <Button asChild>
-                    <Link href={"https://admin-comunity.vercel.app/"} target="_blank" className="mt-auto py-2 rounded-xl w-full flex justify-center items-center hover:bg-zinc-300 cursor-pointer">
-                    <FaRegEye className="mr-3 text-xl"/>{x("Proyectos.proyecto2.boton")}
-                    </Link>
-                </Button>
-            </div>
-
-            <div className="bg-[#272730] pt-4 pb-5 w-1/3 rounded-xl border border-zinc-600 px-4 flex flex-col h-full">
-                <div className='overflow-hidden'>
-                    <Image src="/proyectos/shadcn-nextjs.png" width={600} height={600} alt="shadcn nextjs homepage" className="rounded-lg hover:scale-110 transition-all duration-300" />
-                </div>
-                <p className="text-center mt-4 text-lime-500">{x("Proyectos.proyecto3.fecha")}</p>
-                <h4 className="text-xl text-center text-white mt-2 font-bold">{x("Proyectos.proyecto3.titulo")}</h4>
-                <p className="text-center my-8 text-zinc-400 flex-grow">
-                {x("Proyectos.proyecto3.descripcion")}
-                </p>
-                <Button asChild>
-                    <Link href={"https://nextjs-shadcn-black.vercel.app/"} target="_blank" className="mt-auto py-2 rounded-xl w-full flex justify-center items-center hover:bg-zinc-300 cursor-pointer">
-                    <FaRegEye className="mr-3 text-xl"/>{x("Proyectos.proyecto3.boton")}
-                    </Link>
-                </Button>
-            </div>
-            </div>
-
-      
+          </div>
+        </div>
       </section>
-      </>
+
+      {/* PROYECTOS REALIZADOS */}
+      <h3 className="text-center text-3xl sm:text-4xl text-white mt-20 flex justify-center items-center">
+        <GrProjects className="text-lime-500 text-3xl mr-3" />
+        {x("titulo")}
+      </h3>
+      <p className="text-center text-lime-500 mt-2">{x("subtitulo")}</p>
+
+      {/* Sección con alturas iguales */}
+      <section
+        className="mb-20 mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-fr"
+      >
+        {[
+          {
+            img: "/proyectos/nutrihome.png",
+            alt: "nutricion homepage",
+            link: "https://proyecto-nutricion-ia.vercel.app/",
+            fecha: x("Proyectos.proyecto1.fecha"),
+            titulo: x("Proyectos.proyecto1.titulo"),
+            descripcion: x("Proyectos.proyecto1.descripcion"),
+            boton: x("Proyectos.proyecto1.boton"),
+          },
+          {
+            img: "/proyectos/adminhome.png",
+            alt: "admin homepage",
+            link: "https://admin-comunity.vercel.app/",
+            fecha: x("Proyectos.proyecto2.fecha"),
+            titulo: x("Proyectos.proyecto2.titulo"),
+            descripcion: x("Proyectos.proyecto2.descripcion"),
+            boton: x("Proyectos.proyecto2.boton"),
+          },
+          {
+            img: "/proyectos/shadcn-nextjs.png",
+            alt: "shadcn nextjs homepage",
+            link: "https://nextjs-shadcn-black.vercel.app/",
+            fecha: x("Proyectos.proyecto3.fecha"),
+            titulo: x("Proyectos.proyecto3.titulo"),
+            descripcion: x("Proyectos.proyecto3.descripcion"),
+            boton: x("Proyectos.proyecto3.boton"),
+          },
+        ].map((proyecto, i) => (
+          <div
+            key={i}
+            className="bg-[#272730] pt-4 pb-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full"
+          >
+            <div className="overflow-hidden rounded-lg">
+              <Image
+                src={proyecto.img}
+                width={600}
+                height={600}
+                alt={proyecto.alt}
+                className="rounded-lg hover:scale-110 transition-all duration-300 w-full"
+              />
+            </div>
+
+            <p className="text-center mt-4 text-lime-500">{proyecto.fecha}</p>
+            <h4 className="text-xl text-center text-white mt-2 font-bold">{proyecto.titulo}</h4>
+            <p className="text-center my-6 text-zinc-400 flex-grow">{proyecto.descripcion}</p>
+
+            <div className="mt-auto">
+              <Button asChild className="w-full">
+                <Link
+                  href={proyecto.link}
+                  target="_blank"
+                  className="py-2 rounded-xl w-full flex justify-center items-center hover:bg-zinc-300 cursor-pointer"
+                >
+                  <FaRegEye className="mr-3 text-xl" />
+                  {proyecto.boton}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
   )
 }
 
