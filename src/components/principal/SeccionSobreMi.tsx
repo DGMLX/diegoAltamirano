@@ -58,7 +58,7 @@ const SeccionSobreMi = () => {
 
                 <Tooltip>
                     <TooltipTrigger>
-                        <Image src={"/tech/Typescript.png"} alt="logo typescript" width={40} height={40}/>
+                        <Image src={"/tech/TypeScript.png"} alt="logo typescript" width={40} height={40}/>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p>Typescript</p>

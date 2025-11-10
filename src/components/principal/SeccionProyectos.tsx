@@ -6,6 +6,7 @@ import { FaLaptopCode, FaRegEye } from 'react-icons/fa'
 import { GrProjects } from 'react-icons/gr'
 import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
+import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip'
 
 
 const SeccionProyectos = () => {
@@ -31,15 +32,85 @@ const SeccionProyectos = () => {
                 <h2>Lexify AI</h2>
                 <p className=" text-zinc-400 text-md">{t("descripcion")}</p>
                 <div className="flex gap-4 ">
-                    <Image src={"/tech/logo-nextjs.jpg"} alt="logo nextjs" className="rounded-full" width={30} height={30}/>
-                    <Image src={"/tech/tailwind.png"} alt="logo tailwind" width={30} height={30}/>
-                    <Image src={"/tech/Typescript.png"} alt="logo typescript" width={30} height={30}/>
-                    <Image src={"/tech/Postgresql.png"} alt="logo postgresql" width={30} height={30}/>
-                    <Image src={"/tech/prisma.png"} alt="logo prisma" width={30} height={30}/>
-                    <Image src={"/tech/vercel.png"} alt="logo vercel" className="rounded-full" width={30} height={30}/>
-                    <Image src={"/tech/shadcn_logo.png"} alt="logo shadcn" className="rounded-full" width={30} height={30}/>
-                    <Image src={"/tech/openai.png"} alt="logo openai" className="rounded-full" width={30} height={30}/>
-                    <Image src={"/tech/langchain-color.png"} alt="logo langcahin" className="bg-white rounded-full" width={30} height={30}/>
+                     <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/logo-nextjs.jpg"} alt="logo nextjs" className="rounded-full" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>NextJS</p>
+                    </TooltipContent>
+                </Tooltip>
+
+                 <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/tailwind.png"} alt="logo tailwind" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>Tailwind CSS</p>
+                    </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/TypeScript.png"} alt="logo typescript" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>Typescript</p>
+                    </TooltipContent>
+                </Tooltip>
+
+                         <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/Postgresql.png"} alt="logo postgresql" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>PostgreSQL</p>
+                    </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/prisma.png"} alt="logo prisma" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>Prisma</p>
+                    </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/vercel.png"} alt="logo vercel" className="rounded-full" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>Vercel</p>
+                    </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/shadcn_logo.png"} alt="logo shadcn" className="rounded-full" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>Shadcn</p>
+                    </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                    <TooltipTrigger>
+                        <Image src={"/tech/openai.png"} alt="logo openai" className="rounded-full" width={40} height={40}/>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                        <p>OpenAI</p>
+                    </TooltipContent>
+                    </Tooltip>
+
+            <Tooltip>
+                <TooltipTrigger>
+                    <Image src={"/tech/langchain-color.png"} alt="logo langcahin" className="bg-white rounded-full" width={40} height={40}/>
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>Langchain</p>
+                </TooltipContent>
+                </Tooltip>
                 </div>
                 <div className="flex gap-10">
                     <Link href={"https://lexify-ia.vercel.app/"} target='_blank' className="flex items-center cursor-pointer bg-white text-black py-1 px-2 rounded-full hover:bg-zinc-300 text-sm"><BsArrowUpRight className="mr-2"/>{t("boton")}</Link>
