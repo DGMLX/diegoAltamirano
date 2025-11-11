@@ -7,13 +7,12 @@ const SeccionInfo = () => {
   const t = useTranslations('Info');
   return (
     <section
-      className="bg-[#272730] mb-10 px-10 sm:px-12 md:px-14 py-16 sm:py-20 bg-center bg-cover flex flex-col sm:flex-row sm:flex-wrap md:flex-nowrap justify-around items-center text-white border rounded-xl border-zinc-600 gap-10 sm:gap-8"
+      className=" mb-10 px-10 sm:px-12 md:px-14 py-16 sm:py-20 bg-center bg-cover flex flex-col sm:flex-row sm:flex-wrap md:flex-nowrap justify-around items-center border rounded-xl border-zinc-600 gap-10 sm:gap-8"
       style={{
         backgroundImage: `
           repeating-linear-gradient(0deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px),
           repeating-linear-gradient(90deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px)
         `,
-     
       }}
     >
       <div className="flex flex-col items-center text-center">

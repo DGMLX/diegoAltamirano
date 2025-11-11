@@ -10,52 +10,52 @@ const SeccionTrayectoria = () => {
 
       {/* EDUCACIÓN */}
       <div
-        className="bg-[#272730] pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
+        className=" pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
         
       >
-        <h3 className="text-white text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
+        <h3 className=" text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
           <PiStudent className="mr-2 text-3xl sm:text-4xl text-lime-500" />
           {t("Educacion.titulo")}
         </h3>
 
         <div className="border-l border-slate-500 pl-5 mt-10">
           <div className="flex">
-            <p className="text-slate-400">2023-2025:</p>
+            <p className="text-slate-600">2023-2025:</p>
             <div className="ml-2">
               <p className="text-lime-500">{t("Educacion.curso5.lugar")}</p>
-              <p className="text-white">{t("Educacion.curso5.titulo")}</p>
+              <p className="">{t("Educacion.curso5.titulo")}</p>
             </div>
           </div>
 
           <div className="flex mt-5">
-            <p className="text-slate-400">2023-2024:</p>
+            <p className="text-slate-600">2023-2024:</p>
             <div className="ml-2">
               <p className="text-lime-500">{t("Educacion.curso4.lugar")}</p>
-              <p className="text-white">{t("Educacion.curso4.titulo")}</p>
+              <p className="">{t("Educacion.curso4.titulo")}</p>
             </div>
           </div>
 
           <div className="flex mt-5">
-            <p className="text-slate-400">2022-2023:</p>
+            <p className="text-slate-600">2022-2023:</p>
             <div className="ml-2">
               <p className="text-lime-500">{t("Educacion.curso3.lugar")}</p>
-              <p className="text-white">{t("Educacion.curso3.titulo")}</p>
+              <p className="">{t("Educacion.curso3.titulo")}</p>
             </div>
           </div>
 
           <div className="flex mt-5">
-            <p className="text-slate-400">2021-2022:</p>
+            <p className="text-slate-600">2021-2022:</p>
             <div className="ml-2">
               <p className="text-lime-500">{t("Educacion.curso2.lugar")}</p>
-              <p className="text-white">{t("Educacion.curso2.titulo")}</p>
+              <p className="">{t("Educacion.curso2.titulo")}</p>
             </div>
           </div>
 
           <div className="flex mt-5">
-            <p className="text-slate-400">2021-2022:</p>
+            <p className="text-slate-600">2021-2022:</p>
             <div className="ml-2">
               <p className="text-lime-500">{t("Educacion.curso1.lugar")}</p>
-              <p className="text-white">{t("Educacion.curso1.titulo")}</p>
+              <p className="">{t("Educacion.curso1.titulo")}</p>
             </div>
           </div>
         </div>
@@ -63,36 +63,36 @@ const SeccionTrayectoria = () => {
 
       {/* EXPERIENCIA */}
       <div
-        className="bg-[#272730] pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
+        className="pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
         
       >
-        <h3 className="text-white text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
+        <h3 className=" text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
           <FaWpforms className="mr-2 text-3xl sm:text-4xl text-lime-500" />
           {t("Experiencia.titulo")}
         </h3>
 
         <div className="border-l border-slate-500 pl-5 mt-10">
           <div className="flex">
-            <p className="text-slate-400">2024-2025:</p>
+            <p className="text-slate-600">2024-2025:</p>
             <div className="ml-2">
               <p className="text-lime-500">EcoAlliance</p>
-              <p className="text-white">{t("Experiencia.titulo3")}</p>
+              <p className="">{t("Experiencia.titulo3")}</p>
             </div>
           </div>
 
           <div className="flex mt-5">
-            <p className="text-slate-400">2023-2023:</p>
+            <p className="text-slate-600">2023-2023:</p>
             <div className="ml-2">
               <p className="text-lime-500">Aridos Quinta región</p>
-              <p className="text-white">{t("Experiencia.titulo2")}</p>
+              <p className="">{t("Experiencia.titulo2")}</p>
             </div>
           </div>
 
           <div className="flex mt-5">
-            <p className="text-slate-400">2022-2022:</p>
+            <p className="text-slate-600">2022-2022:</p>
             <div className="ml-2">
               <p className="text-lime-500">Izajes y transportes G&G</p>
-              <p className="text-white">{t("Experiencia.titulo1")}</p>
+              <p className="">{t("Experiencia.titulo1")}</p>
             </div>
           </div>
         </div>

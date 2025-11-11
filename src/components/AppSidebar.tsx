@@ -6,7 +6,7 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
-import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
 import { SiGmail } from "react-icons/si"
 import { useTranslations } from "next-intl"
@@ -43,6 +43,12 @@ export function AppSidebar() {
                 <p>diegoaltdev@gmail.com</p>
             </TooltipContent>
             </Tooltip>
+             <Tooltip>
+                  <TooltipTrigger> <FaWhatsapp className="text-xl hover:text-lime-400 transition-all duration-400"/></TooltipTrigger>
+                  <TooltipContent>
+                    <p>+569 54714609</p>
+                  </TooltipContent>
+                </Tooltip>
           </div>
         </div>
       </SidebarContent>

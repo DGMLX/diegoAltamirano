@@ -10,16 +10,16 @@ import { useTranslations } from 'next-intl';
 const SeccionSobreMi = () => {
     const t = useTranslations('SobreMi');
   return (
-      <section className=" flex justify-between items-center border border-zinc-600 rounded-xl bg-[#272730]   mb-10 " >
+      <section className=" flex justify-between items-center border border-zinc-600 rounded-xl   mb-10 " >
     
-            <Image src={"/developer.svg"} alt="developer-img" width={600} height={600}/>
-            <div className="px-16">
+            <Image src={"/developer.svg"} alt="developer-img" width={450} height={450} className='hidden md:block'/>
+            <div className="px-16 py-5 md:py-0">
     
               <h2 className="flex items-center text-lg lg:text-xl">
-                <span className="text-pink-400">{'<'}span{'>'}</span><p className="text-white ">{t("span")}<span className="animate-blink text-pink-400">|</span></p><span className="text-pink-400">{'</'}span{'>'}</span>
+                <span className="text-pink-400">{'<'}span{'>'}</span><p className="">{t("span")}<span className="animate-blink text-pink-400">|</span></p><span className="text-pink-400">{'</'}span{'>'}</span>
               </h2>    
-              <h1 className="text-5xl mt-5 text-white font-medium">{t("titulo")}<span className="text-5xl font-medium text-lime-400">{'{Full Stack}'}</span></h1>
-              <p className="text-white mt-5"><span className="text-pink-400 text-xl">{'<'}p{'>'}</span>{t("descripcion")}<span className="text-pink-400 text-xl">{'</'}p{'>'}</span></p>
+              <h1 className="text-5xl mt-5 font-medium">{t("titulo")}<span className="text-5xl font-medium text-lime-400">{'{Full Stack}'}</span></h1>
+              <p className=" mt-5"><span className="text-pink-400 text-xl">{'<'}p{'>'}</span>{t("descripcion")}<span className="text-pink-400 text-xl">{'</'}p{'>'}</span></p>
               <div className="mt-5 flex gap-4">
                    
                 <Tooltip>
@@ -27,7 +27,7 @@ const SeccionSobreMi = () => {
                         <Image src={"/tech/logo-nextjs.jpg"} alt="logo nextjs" className="rounded-full" width={40} height={40}/>
                     </TooltipTrigger>
                     <TooltipContent>
-                        <p>NextJS</p>
+                        <p>Next JS</p>
                     </TooltipContent>
                 </Tooltip>
 

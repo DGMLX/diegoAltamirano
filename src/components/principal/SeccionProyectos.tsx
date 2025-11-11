@@ -16,7 +16,7 @@ const SeccionProyectos = () => {
     <>
       {/* PROYECTO ACTUAL */}
       <section
-        className="bg-[#272730] mb-10 px-6 sm:px-10 lg:px-14 py-10 bg-center bg-cover text-white border rounded-xl border-zinc-600"
+        className="mb-10 px-6 sm:px-10 lg:px-14 py-10 bg-center bg-cover  border rounded-xl border-zinc-600"
         style={{
           backgroundImage: `
             repeating-linear-gradient(0deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px),
@@ -29,7 +29,7 @@ const SeccionProyectos = () => {
           {t("titulo")}
         </h3>
 
-        <h2 className="text-white text-3xl sm:text-4xl font-medium m-2 text-center sm:text-left">
+        <h2 className=" text-3xl sm:text-4xl font-medium m-2 text-center sm:text-left">
           Lexify AI
         </h2>
 
@@ -93,7 +93,7 @@ const SeccionProyectos = () => {
       </section>
 
       {/* PROYECTOS REALIZADOS */}
-      <h3 className="text-center text-3xl sm:text-4xl text-white mt-20 flex justify-center items-center">
+      <h3 className="text-center text-3xl sm:text-4xl mt-20 flex justify-center items-center">
         <GrProjects className="text-lime-500 text-3xl mr-3" />
         {x("titulo")}
       </h3>
@@ -134,7 +134,7 @@ const SeccionProyectos = () => {
         ].map((proyecto, i) => (
           <div
             key={i}
-            className="bg-[#272730] pt-4 pb-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full"
+            className=" pt-4 pb-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full"
           >
             <div className="overflow-hidden rounded-lg">
               <Image
@@ -147,7 +147,7 @@ const SeccionProyectos = () => {
             </div>
 
             <p className="text-center mt-4 text-lime-500">{proyecto.fecha}</p>
-            <h4 className="text-xl text-center text-white mt-2 font-bold">{proyecto.titulo}</h4>
+            <h4 className="text-xl text-center  mt-2 font-bold">{proyecto.titulo}</h4>
             <p className="text-center my-6 text-zinc-400 flex-grow">{proyecto.descripcion}</p>
 
             <div className="mt-auto">

@@ -4,12 +4,12 @@ export default function CircleAnimation() {
   return (
     <div className="absolute -bottom-5 -right-12">
       {/* Círculo grande */}
-      <div className="relative w-56 h-56 rounded-full border border-white/30 flex items-center justify-center">
+      <div className="relative w-56 h-56 rounded-full border border-zinc-600 flex items-center justify-center">
 
         {/* Círculo mediano */}
-        <div className="relative w-45 h-45 rounded-full border border-white/60 flex items-center justify-center">
+        <div className="relative w-45 h-45 rounded-full border border-zinc-600 flex items-center justify-center">
           {/* Círculo pequeño */}
-          <div className="relative w-30 h-30 rounded-full border border-white/60">
+          <div className="relative w-30 h-30 rounded-full border border-zinc-600">
             {/* Contenedor que rota para los puntos */}
             <div className="absolute inset-0 animate-spin-slow">
               {/* Punto 1 */}

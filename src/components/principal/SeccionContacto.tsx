@@ -80,13 +80,13 @@ const SeccionContacto = () => {
 }
 
 const ContactInfo = ({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) => (
-  <div className="flex items-center bg-zinc-900 rounded-md p-3 shadow-md">
+  <div className="flex items-center  rounded-md p-3 shadow-md">
     <div className="border border-zinc-700 p-3 mr-3 bg-zinc-800 rounded-md flex items-center justify-center">
       {icon}
     </div>
     <div>
-      <p className="text-sm text-zinc-500">{label}</p>
-      <p className="text-white break-words">{value}</p>
+      <p className="text-sm text-zinc-600">{label}</p>
+      <p className=" break-words">{value}</p>
     </div>
   </div>
 )

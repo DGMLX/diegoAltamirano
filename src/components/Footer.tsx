@@ -15,7 +15,7 @@ const Footer = () => {
       {/* Logo */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
         <FaCode className="text-4xl text-lime-400" />
-        <p className="text-white text-2xl font-thin">DGMLX</p>
+        <p className=" text-2xl font-thin">DGMLX</p>
       </div>
 
       {/* Redes sociales */}
