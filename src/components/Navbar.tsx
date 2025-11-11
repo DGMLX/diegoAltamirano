@@ -25,19 +25,18 @@ const Navbar = () => {
   return (
     <>
 
- <header className="bg-[#272730] mt-10 mx-5 md:mx-14  justify-between flex items-stretch rounded-xl border-zinc-500 border-t border-l border-r overflow-hidden h-20 shadow-lg shadow-zinc-900" >
+ <header className=" mt-10 mx-5 md:mx-14  justify-between flex items-stretch rounded-xl border-zinc-500 border-t border-l border-r overflow-hidden h-20 shadow-lg shadow-zinc-900" >
   {/* Botón menú */}
-  <div className="bg-[#32323b] cursor-pointer px-5 flex items-center justify-center">
+  <div className=" cursor-pointer px-5 flex items-center justify-center">
     <SidebarTrigger className="">
     </SidebarTrigger>
   </div>
-  <div className=' bg-[#272730] flex items-center'>
+  <div className='  flex items-center'>
     <FaCode className='text-4xl text-lime-400 ml-4'/>
-    <p className='text-white ml-2 text-xl font-thin'>DGMLX</p>
   </div> 
 
   {/* Navbar */}  
-  <nav className="flex-1 text-gray-400 bg-[#272730]  items-center justify-center gap-7 text-lg hidden md:flex">
+  <nav className="flex-1 text-gray-400   items-center justify-center gap-7 text-lg hidden md:flex">
     <Link href={"/#"} className=" text-white transition-all duration-400">{t("sobreMi")}</Link>
     <Link href={"/#trayectoria"} className="hover:text-white transition-all duration-400">{t("trayectoria")}</Link>
     <Link href={"/#servicios"} className="hover:text-white transition-all duration-400">{t("servicios")}</Link>
@@ -45,14 +44,14 @@ const Navbar = () => {
     <Link href={"/#contacto"} className="hover:text-white transition-all duration-400">{t("contacto")}</Link>
   </nav>
 
-    <div className="flex items-center pr-5 bg-[#272730]">
+    <div className="flex items-center pr-5 ">
       <SeleccionIdioma/>
     </div>
 
 
 
   {/* Redes sociales */}
-  <div className="text-white hidden lg:flex gap-3 pr-5 bg-[#272730] items-center">
+  <div className=" hidden lg:flex gap-3 pr-5  items-center">
     <Link href={"https://github.com/DGMLX"} target='_blank'><FaGithub className="text-xl cursor-pointer hover:text-lime-400 transition-all duration-400"/></Link>
     <Link href={"https://www.linkedin.com/in/diego-altamirano-gallardo-72a7a2203/"} target='_blank'><FaLinkedinIn className="text-xl cursor-pointer hover:text-lime-400 transition-all duration-400"/></Link>
 
@@ -73,7 +72,7 @@ const Navbar = () => {
   
    
   </div>
-  <div className="flex items-center   bg-[#272730] pr-2">
+  <div className="flex items-center   pr-2">
 
     <ModeToggle/>
   </div>
