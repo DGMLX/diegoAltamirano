@@ -13,7 +13,7 @@ const SeccionServicios = () => {
 
   return (
     <section
-      className="border border-zinc-600 rounded-xl pb-10  mb-10 px-4 sm:px-6 md:px-10"
+      className="bg-primary-foreground border border-zinc-600 rounded-xl pb-10  mb-10 px-4 sm:px-6 md:px-10"
     >
       <h3 className="text-lime-500 text-center mt-10 flex justify-center items-center text-lg">
         <FaDotCircle className="mr-2 text-sm" />

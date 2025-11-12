@@ -12,10 +12,10 @@ import { useTranslations } from 'next-intl'
 const SeccionInvestigaciones = () => {
   const t = useTranslations('Investigaciones');
   return (
-    <section className="flex flex-col lg:flex-row gap-5">
+    <section className="flex flex-col lg:flex-row gap-5 bg-pr">
       {/* === Texto e íconos === */}
       <div
-        className="relative  mb-10 px-8 sm:px-10 md:px-14 pt-10 pb-5 w-full lg:w-3/5 rounded-xl border border-zinc-600"
+        className="bg-primary-foreground relative  mb-10 px-8 sm:px-10 md:px-14 pt-10 pb-5 w-full lg:w-3/5 rounded-xl border border-zinc-600"
         style={{
           WebkitMaskImage:
             "linear-gradient(to right, transparent 0%, black 0%, black 0%)",
@@ -78,7 +78,7 @@ const SeccionInvestigaciones = () => {
 
       {/* === Imagen del robot === */}
       <div
-        className=" hidden lg:flex mb-10 px-8 sm:px-10 md:px-14 pt-10 pb-5 w-full lg:w-2/5 rounded-xl border border-zinc-600  justify-center items-center"
+        className="bg-primary-foreground hidden lg:flex mb-10 px-8 sm:px-10 md:px-14 pt-10 pb-5 w-full lg:w-2/5 rounded-xl border border-zinc-600  justify-center items-center"
       
       >
         <Image

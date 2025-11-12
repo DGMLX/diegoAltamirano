@@ -10,7 +10,7 @@ import { useTranslations } from 'next-intl';
 const SeccionSobreMi = () => {
     const t = useTranslations('SobreMi');
   return (
-      <section className=" flex justify-between items-center border border-zinc-600 rounded-xl   mb-10 " >
+      <section className="bg-primary-foreground flex justify-between items-center border border-zinc-600 rounded-xl   mb-10 " >
     
             <Image src={"/developer.svg"} alt="developer-img" width={450} height={450} className='hidden md:block'/>
             <div className="px-16 py-5 md:py-0">

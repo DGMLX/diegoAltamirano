@@ -31,7 +31,7 @@ const SeccionContacto = () => {
       <div className="flex flex-col items-center lg:flex-row mt-10 gap-10">
 
         {/* Formulario */}
-        <div className="w-full lg:w-2/3">
+        <div className="w-full lg:w-2/3 ">
           <form className="w-full">
             <div className="flex flex-col sm:flex-row gap-3">
               <Input placeholder={t("Formulario.labelNombre")} className="mt-3 flex-1" />
@@ -49,11 +49,12 @@ const SeccionContacto = () => {
         </div>
 
         {/* Información de contacto */}
-        <div className="w-full lg:w-1/3 space-y-4">
+        <div className="w-full lg:w-1/3 space-y-4 bg-prim">
           <ContactInfo
             icon={<CiPhone className="text-3xl text-lime-500" />}
             label={t("Info.numero")}
             value="+569 54714609"
+            
           />
 
           <ContactInfo
@@ -80,7 +81,7 @@ const SeccionContacto = () => {
 }
 
 const ContactInfo = ({ icon, label, value }: { icon: React.ReactNode, label: string, value: string }) => (
-  <div className="flex items-center  rounded-md p-3 shadow-md">
+  <div className="bg-primary-foreground flex items-center  rounded-md p-3 shadow-md">
     <div className="border border-zinc-700 p-3 mr-3 bg-zinc-800 rounded-md flex items-center justify-center">
       {icon}
     </div>

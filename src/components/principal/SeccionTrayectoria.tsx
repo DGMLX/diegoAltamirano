@@ -10,7 +10,7 @@ const SeccionTrayectoria = () => {
 
       {/* EDUCACIÓN */}
       <div
-        className=" pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
+        className="bg-primary-foreground pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
         
       >
         <h3 className=" text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
@@ -63,7 +63,7 @@ const SeccionTrayectoria = () => {
 
       {/* EXPERIENCIA */}
       <div
-        className="pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
+        className="bg-primary-foreground pt-10 pb-10 rounded-xl border border-zinc-600 px-8 sm:px-10 md:px-14 w-full md:w-1/2"
         
       >
         <h3 className=" text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">

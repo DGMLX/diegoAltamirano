@@ -3,12 +3,10 @@
 import * as React from "react"
 
 import Link from 'next/link';
-import { IoIosMenu } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
-import SliderNav from './SliderNav';
 import { FaCode } from "react-icons/fa";
 import {
   Tooltip,
@@ -25,7 +23,7 @@ const Navbar = () => {
   return (
     <>
 
- <header className=" mt-10 mx-5 md:mx-14  justify-between flex items-stretch rounded-xl border-zinc-500 border-t border-l border-r overflow-hidden h-20 shadow-lg shadow-zinc-900" >
+ <header className="bg-primary-foreground mt-10 mx-5 md:mx-14  justify-between flex items-stretch rounded-xl border-zinc-500  overflow-hidden h-20 shadow-lg " >
   {/* Botón menú */}
   <div className=" cursor-pointer px-5 flex items-center justify-center">
     <SidebarTrigger className="">
@@ -38,10 +36,10 @@ const Navbar = () => {
   {/* Navbar */}  
   <nav className="flex-1 text-gray-400   items-center justify-center gap-7 text-lg hidden md:flex">
     <Link href={"/#"} className=" text-white transition-all duration-400">{t("sobreMi")}</Link>
-    <Link href={"/#trayectoria"} className="hover:text-white transition-all duration-400">{t("trayectoria")}</Link>
-    <Link href={"/#servicios"} className="hover:text-white transition-all duration-400">{t("servicios")}</Link>
-    <Link href={"/#proyectos"} className="hover:text-white transition-all duration-400">{t("proyectosRealizados")}</Link>
-    <Link href={"/#contacto"} className="hover:text-white transition-all duration-400">{t("contacto")}</Link>
+    <Link href={"/#trayectoria"} className="hover:text-gray-500 transition-all duration-400">{t("trayectoria")}</Link>
+    <Link href={"/#servicios"} className="hover:text-gray-500 transition-all duration-400">{t("servicios")}</Link>
+    <Link href={"/#proyectos"} className="hover:text-gray-500 transition-all duration-400">{t("proyectosRealizados")}</Link>
+    <Link href={"/#contacto"} className="hover:text-gray-500 transition-all duration-400">{t("contacto")}</Link>
   </nav>
 
     <div className="flex items-center pr-5 ">

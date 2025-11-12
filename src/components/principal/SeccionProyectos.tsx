@@ -16,7 +16,7 @@ const SeccionProyectos = () => {
     <>
       {/* PROYECTO ACTUAL */}
       <section
-        className="mb-10 px-6 sm:px-10 lg:px-14 py-10 bg-center bg-cover  border rounded-xl border-zinc-600"
+        className="bg-primary-foreground mb-10 px-6 sm:px-10 lg:px-14 py-10 bg-center bg-cover  border rounded-xl border-zinc-600"
         style={{
           backgroundImage: `
             repeating-linear-gradient(0deg, #ffffff10, #ffffff10 1px, transparent 1px, transparent 20px),
@@ -134,7 +134,7 @@ const SeccionProyectos = () => {
         ].map((proyecto, i) => (
           <div
             key={i}
-            className=" pt-4 pb-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full"
+            className="bg-primary-foreground pt-4 pb-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full"
           >
             <div className="overflow-hidden rounded-lg">
               <Image
