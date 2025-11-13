@@ -25,7 +25,7 @@ const SeccionContacto = () => {
   // } = useForm<Inputs>()
   return (
     <section className="mb-20 px-5">
-      <h2 className="text-lime-400 text-2xl">{t("titulo")}</h2>
+      <h2 className="text-lime-400 font-medium text-3xl">{t("titulo")}</h2>
 
       {/* Contenedor principal */}
       <div className="flex flex-col items-center lg:flex-row mt-10 gap-10">

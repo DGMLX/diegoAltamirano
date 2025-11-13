@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       {/* Navegación */}
-      <nav className=" hidden md:flex flex-wrap justify-center items-center text-gray-400 mt-6 text-sm gap-4 sm:gap-6 md:gap-8">
+      <nav className=" hidden md:flex flex-wrap justify-center items-center text-gray-600 mt-6 text-sm gap-4 sm:gap-6 md:gap-8">
         <Link href="/#sobreMi" className="hover:text-white transition-all duration-300">{t("sobreMi")}</Link>
         <Link href="/#trayectoria" className="hover:text-white transition-all duration-300">{t("trayectoria")}</Link>
         <Link href="/#servicios" className="hover:text-white transition-all duration-300">{t("servicios")}</Link>

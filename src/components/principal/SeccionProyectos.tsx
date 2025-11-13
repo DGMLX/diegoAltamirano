@@ -78,16 +78,16 @@ const SeccionProyectos = () => {
               ))}
             </div>
 
-            <div className="flex justify-center lg:justify-start">
+            <Button className="flex justify-center lg:justify-start" asChild>
               <Link
                 href="https://lexify-ia.vercel.app/"
                 target="_blank"
-                className="flex items-center cursor-pointer bg-white text-black py-1 px-3 rounded-full hover:bg-zinc-300 text-sm"
+                className="flex items-center cursor-pointer py-1 px-3 rounded-full w-full md:w-min  text-sm"
               >
                 <BsArrowUpRight className="mr-2" />
                 {t("boton")}
               </Link>
-            </div>
+            </Button>
           </div>
         </div>
       </section>

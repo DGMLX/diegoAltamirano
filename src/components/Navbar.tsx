@@ -34,12 +34,12 @@ const Navbar = () => {
   </div> 
 
   {/* Navbar */}  
-  <nav className="flex-1 text-gray-400   items-center justify-center gap-7 text-lg hidden md:flex">
-    <Link href={"/#"} className=" text-white transition-all duration-400">{t("sobreMi")}</Link>
-    <Link href={"/#trayectoria"} className="hover:text-gray-500 transition-all duration-400">{t("trayectoria")}</Link>
-    <Link href={"/#servicios"} className="hover:text-gray-500 transition-all duration-400">{t("servicios")}</Link>
-    <Link href={"/#proyectos"} className="hover:text-gray-500 transition-all duration-400">{t("proyectosRealizados")}</Link>
-    <Link href={"/#contacto"} className="hover:text-gray-500 transition-all duration-400">{t("contacto")}</Link>
+  <nav className="flex-1 text-gray-500   items-center justify-center gap-7 text-lg hidden md:flex">
+    <Link href={"/#"} className=" font-bold transition-all duration-400">{t("sobreMi")}</Link>
+    <Link href={"/#trayectoria"} className="hover:text-gray-600 transition-all duration-400">{t("trayectoria")}</Link>
+    <Link href={"/#servicios"} className="hover:text-gray-600 transition-all duration-400">{t("servicios")}</Link>
+    <Link href={"/#proyectos"} className="hover:text-gray-600 transition-all duration-400">{t("proyectosRealizados")}</Link>
+    <Link href={"/#contacto"} className="hover:text-gray-600 transition-all duration-400">{t("contacto")}</Link>
   </nav>
 
     <div className="flex items-center pr-5 ">
