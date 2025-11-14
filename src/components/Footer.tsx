@@ -14,23 +14,23 @@ const Footer = () => {
 
       {/* Logo */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
-        <FaCode className="text-4xl text-lime-400" />
+        <FaCode className="text-4xl text-lime-600" />
         <p className=" text-2xl font-thin">DGMLX</p>
       </div>
 
       {/* Redes sociales */}
       <div className="flex flex-wrap justify-center items-center gap-5 mt-5">
         <Link href="https://github.com/DGMLX" target="_blank">
-          <FaGithub className="text-2xl cursor-pointer hover:text-lime-400 transition-all duration-300" />
+          <FaGithub className="text-2xl cursor-pointer hover:text-lime-500 transition-all duration-300" />
         </Link>
 
         <Link href="https://www.linkedin.com/in/diego-altamirano-gallardo-72a7a2203/" target="_blank">
-          <FaLinkedinIn className="text-2xl cursor-pointer hover:text-lime-400 transition-all duration-300" />
+          <FaLinkedinIn className="text-2xl cursor-pointer hover:text-lime-500 transition-all duration-300" />
         </Link>
 
         <Tooltip>
           <TooltipTrigger>
-            <SiGmail className="text-2xl hover:text-lime-400 transition-all duration-300 cursor-pointer" />
+            <SiGmail className="text-2xl hover:text-lime-500 transition-all duration-300 cursor-pointer" />
           </TooltipTrigger>
           <TooltipContent>
             <p>diegoaltdev@gmail.com</p>
@@ -39,7 +39,7 @@ const Footer = () => {
 
         <Tooltip>
           <TooltipTrigger>
-            <FaWhatsapp className="text-2xl hover:text-lime-400 transition-all duration-300 cursor-pointer" />
+            <FaWhatsapp className="text-2xl hover:text-lime-500 transition-all duration-300 cursor-pointer" />
           </TooltipTrigger>
           <TooltipContent>
             <p>+569 54714609</p>

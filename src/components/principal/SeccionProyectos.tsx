@@ -24,8 +24,8 @@ const SeccionProyectos = () => {
           `
         }}
       >
-        <h3 className="text-lime-500 text-lg font-medium text-center flex justify-center items-center">
-          <FaLaptopCode className="mr-2 text-lg text-lime-500" />
+        <h3 className="text-lime-600 text-lg font-medium text-center flex justify-center items-center">
+          <FaLaptopCode className="mr-2 text-lg text-lime-600" />
           {t("titulo")}
         </h3>
 
@@ -94,10 +94,10 @@ const SeccionProyectos = () => {
 
       {/* PROYECTOS REALIZADOS */}
       <h3 className="text-center text-3xl sm:text-4xl mt-20 flex justify-center items-center">
-        <GrProjects className="text-lime-500 text-3xl mr-3" />
+        <GrProjects className="text-lime-600 text-3xl mr-3" />
         {x("titulo")}
       </h3>
-      <p className="text-center text-lime-500 mt-2">{x("subtitulo")}</p>
+      <p className="text-center text-lime-600 mt-2">{x("subtitulo")}</p>
 
       {/* Sección con alturas iguales */}
       <section
@@ -146,7 +146,7 @@ const SeccionProyectos = () => {
               />
             </div>
 
-            <p className="text-center mt-4 text-lime-700">{proyecto.fecha}</p>
+            <p className="text-center mt-4 text-lime-600">{proyecto.fecha}</p>
             <h4 className="text-xl text-center  mt-2 font-bold">{proyecto.titulo}</h4>
             <p className="text-center my-6 text-primary flex-grow">{proyecto.descripcion}</p>
 
@@ -169,4 +169,4 @@ const SeccionProyectos = () => {
   )
 }
 
-export default SeccionProyectos
+export default SeccionProyectos 

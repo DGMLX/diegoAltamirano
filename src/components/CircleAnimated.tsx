@@ -15,7 +15,7 @@ export default function CircleAnimation() {
               {/* Punto 1 */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-pink-600 rounded-full shadow-md" />
               {/* Punto 2 */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-lime-500 rounded-full shadow-md" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-lime-600 rounded-full shadow-md" />
             </div>
           </div>
 

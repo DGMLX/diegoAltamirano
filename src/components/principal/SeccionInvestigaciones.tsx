@@ -22,8 +22,8 @@ const SeccionInvestigaciones = () => {
       
         }}
       >
-        <h3 className="text-lime-500 mb-10 flex items-center">
-          <LuBrain className="mr-2 text-xl" />
+        <h3 className="text-lime-600 text-2xl mb-10 flex items-center">
+          <LuBrain className="mr-2" />
           {t("titulo")}
         </h3>
 

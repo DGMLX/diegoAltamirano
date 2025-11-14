@@ -14,7 +14,7 @@ const SeccionTrayectoria = () => {
         
       >
         <h3 className=" text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
-          <PiStudent className="mr-2 text-3xl sm:text-4xl text-lime-500" />
+          <PiStudent className="mr-2 text-3xl sm:text-4xl text-lime-600" />
           {t("Educacion.titulo")}
         </h3>
 
@@ -22,7 +22,7 @@ const SeccionTrayectoria = () => {
           <div className="flex">
             <p className="text-slate-600">2023-2025:</p>
             <div className="ml-2">
-              <p className="text-lime-500">{t("Educacion.curso5.lugar")}</p>
+              <p className="text-lime-600">{t("Educacion.curso5.lugar")}</p>
               <p className="">{t("Educacion.curso5.titulo")}</p>
             </div>
           </div>
@@ -30,7 +30,7 @@ const SeccionTrayectoria = () => {
           <div className="flex mt-5">
             <p className="text-slate-600">2023-2024:</p>
             <div className="ml-2">
-              <p className="text-lime-500">{t("Educacion.curso4.lugar")}</p>
+              <p className="text-lime-600">{t("Educacion.curso4.lugar")}</p>
               <p className="">{t("Educacion.curso4.titulo")}</p>
             </div>
           </div>
@@ -38,7 +38,7 @@ const SeccionTrayectoria = () => {
           <div className="flex mt-5">
             <p className="text-slate-600">2022-2023:</p>
             <div className="ml-2">
-              <p className="text-lime-500">{t("Educacion.curso3.lugar")}</p>
+              <p className="text-lime-600">{t("Educacion.curso3.lugar")}</p>
               <p className="">{t("Educacion.curso3.titulo")}</p>
             </div>
           </div>
@@ -46,7 +46,7 @@ const SeccionTrayectoria = () => {
           <div className="flex mt-5">
             <p className="text-slate-600">2021-2022:</p>
             <div className="ml-2">
-              <p className="text-lime-500">{t("Educacion.curso2.lugar")}</p>
+              <p className="text-lime-600">{t("Educacion.curso2.lugar")}</p>
               <p className="">{t("Educacion.curso2.titulo")}</p>
             </div>
           </div>
@@ -54,7 +54,7 @@ const SeccionTrayectoria = () => {
           <div className="flex mt-5">
             <p className="text-slate-600">2021-2022:</p>
             <div className="ml-2">
-              <p className="text-lime-500">{t("Educacion.curso1.lugar")}</p>
+              <p className="text-lime-600">{t("Educacion.curso1.lugar")}</p>
               <p className="">{t("Educacion.curso1.titulo")}</p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const SeccionTrayectoria = () => {
         
       >
         <h3 className=" text-3xl sm:text-4xl font-medium text-center flex items-center justify-center">
-          <FaWpforms className="mr-2 text-3xl sm:text-4xl text-lime-500" />
+          <FaWpforms className="mr-2 text-3xl sm:text-4xl text-lime-600" />
           {t("Experiencia.titulo")}
         </h3>
 
@@ -75,7 +75,7 @@ const SeccionTrayectoria = () => {
           <div className="flex">
             <p className="text-slate-600">2024-2025:</p>
             <div className="ml-2">
-              <p className="text-lime-500">EcoAlliance</p>
+              <p className="text-lime-600">EcoAlliance</p>
               <p className="">{t("Experiencia.titulo3")}</p>
             </div>
           </div>
@@ -83,7 +83,7 @@ const SeccionTrayectoria = () => {
           <div className="flex mt-5">
             <p className="text-slate-600">2023-2023:</p>
             <div className="ml-2">
-              <p className="text-lime-500">Aridos Quinta región</p>
+              <p className="text-lime-600">Aridos Quinta región</p>
               <p className="">{t("Experiencia.titulo2")}</p>
             </div>
           </div>
@@ -91,7 +91,7 @@ const SeccionTrayectoria = () => {
           <div className="flex mt-5">
             <p className="text-slate-600">2022-2022:</p>
             <div className="ml-2">
-              <p className="text-lime-500">Izajes y transportes G&G</p>
+              <p className="text-lime-600">Izajes y transportes G&G</p>
               <p className="">{t("Experiencia.titulo1")}</p>
             </div>
           </div>

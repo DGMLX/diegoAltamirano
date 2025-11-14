@@ -18,7 +18,7 @@ const SeccionSobreMi = () => {
               <h2 className="flex items-center text-lg lg:text-xl">
                 <span className="text-pink-400">{'<'}span{'>'}</span><p className="">{t("span")}<span className="animate-blink text-pink-400">|</span></p><span className="text-pink-400">{'</'}span{'>'}</span>
               </h2>    
-              <h1 className="text-5xl mt-5 font-medium">{t("titulo")}<span className="text-5xl font-medium text-lime-400">{'{Full Stack}'}</span></h1>
+              <h1 className="text-5xl mt-5 font-medium">{t("titulo")}<span className="text-5xl font-medium text-lime-600">{'{Full Stack}'}</span></h1>
               <p className=" mt-5"><span className="text-pink-400 text-xl">{'<'}p{'>'}</span>{t("descripcion")}<span className="text-pink-400 text-xl">{'</'}p{'>'}</span></p>
               <div className="mt-5 flex gap-4">
                    

@@ -30,7 +30,7 @@ const Navbar = () => {
     </SidebarTrigger>
   </div>
   <div className='  flex items-center'>
-    <FaCode className='text-4xl text-lime-400 ml-4'/>
+    <FaCode className='text-4xl text-lime-600 ml-4'/>
   </div> 
 
   {/* Navbar */}  

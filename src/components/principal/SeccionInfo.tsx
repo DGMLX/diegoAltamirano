@@ -16,25 +16,25 @@ const SeccionInfo = () => {
       }}
     >
       <div className="flex flex-col items-center text-center">
-        <IoMdTimer className="text-lime-500 text-3xl sm:text-4xl" />
+        <IoMdTimer className="text-lime-600 text-3xl sm:text-4xl" />
         <p className="text-3xl sm:text-4xl font-semibold mt-2">+250</p>
         <p className="text-sm sm:text-base">{t('horasPractica')}</p>
       </div>
 
       <div className="flex flex-col items-center text-center">
-        <FaRegCheckCircle className="text-lime-500 text-3xl sm:text-4xl" />
+        <FaRegCheckCircle className="text-lime-600 text-3xl sm:text-4xl" />
         <p className="text-3xl sm:text-4xl font-semibold mt-2">+10</p>
         <p className="text-sm sm:text-base">{t('proyectosRealizados')}</p>
       </div>
 
       <div className="flex flex-col items-center text-center">
-        <FaCode className="text-lime-500 text-3xl sm:text-4xl" />
+        <FaCode className="text-lime-600 text-3xl sm:text-4xl" />
         <p className="text-3xl sm:text-4xl font-semibold mt-2">+1000</p>
         <p className="text-sm sm:text-base">{t('lineasCodigo')}</p>
       </div>
 
       <div className="flex flex-col items-center text-center">
-        <FaGithubAlt className="text-lime-500 text-3xl sm:text-4xl" />
+        <FaGithubAlt className="text-lime-600 text-3xl sm:text-4xl" />
         <p className="text-3xl sm:text-4xl font-semibold mt-2">+25</p>
         <p className="text-sm sm:text-base">{t('repositorios')}</p>
       </div>

@@ -39,7 +39,7 @@ const SeccionContacto = () => {
 
   return (
     <section className="mb-20 px-5">
-      <h2 className="text-lime-400 font-medium text-3xl">{t("titulo")}</h2>
+      <h2 className="text-lime-600 font-medium text-3xl">{t("titulo")}</h2>
 
       {/* Contenedor principal */}
       <div className="flex flex-col items-center lg:flex-row mt-10 gap-10">
@@ -116,26 +116,26 @@ const SeccionContacto = () => {
         {/* Información de contacto */}
         <div className="w-full lg:w-1/3 space-y-4 bg-prim">
           <ContactInfo
-            icon={<CiPhone className="text-3xl text-lime-500" />}
+            icon={<CiPhone className="text-3xl text-lime-600" />}
             label={t("Info.numero")}
             value="+569 54714609"
             
           />
 
           <ContactInfo
-            icon={<MdOutlineAttachEmail className="text-3xl text-lime-500" />}
+            icon={<MdOutlineAttachEmail className="text-3xl text-lime-600" />}
             label={t("Info.email")}
             value="diegoaltdev@gmail.com"
           />
 
           <ContactInfo
-            icon={<FiGithub className="text-3xl text-lime-500" />}
+            icon={<FiGithub className="text-3xl text-lime-600" />}
             label="Github"
             value="DGMLX"
           />
 
           <ContactInfo
-            icon={<FiMapPin className="text-3xl text-lime-500" />}
+            icon={<FiMapPin className="text-3xl text-lime-600" />}
             label={t("Info.ubicacion")}
             value="Chile - Viña del Mar"
           />
