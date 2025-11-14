@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable} antialiased bg-no-repeat`}
+        className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable} antialiased overflow-x-hidden `}
        style={{backgroundImage: `url('/fondo.png')`}}
       >
         <ThemeProvider

@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
 
- <header className="bg-primary-foreground mt-10 mx-5 md:mx-14  justify-between flex items-stretch rounded-xl border-zinc-500  overflow-hidden h-20 shadow-lg " >
+ <header className="bg-primary-foreground mt-10  md:mx-14  justify-between flex items-stretch rounded-xl border-zinc-500  overflow-hidden h-20 shadow-lg " >
   {/* Botón menú */}
   <div className=" cursor-pointer px-5 flex items-center justify-center">
     <SidebarTrigger className="">
