@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
@@ -7,10 +9,12 @@ import { MdOutlineAttachEmail } from "react-icons/md"
 import { FiGithub, FiMapPin } from "react-icons/fi"
 import { useTranslations } from 'next-intl'
 import { useForm, SubmitHandler } from "react-hook-form"
+import { Alert, AlertDescription } from '../ui/alert'
+import { toast } from 'sonner'
 
 type Inputs = {
   nombre: string
-  telefono: string
+  telefono: number
   correo:string
   asunto:string
   mensaje:string
@@ -18,11 +22,21 @@ type Inputs = {
 
 
 const SeccionContacto = () => {
+
   const t = useTranslations("Contacto")
-  // const {register,handleSubmit,
-  //   watch,
-  //   formState: { errors },
-  // } = useForm<Inputs>()
+   const {register,handleSubmit,
+     watch,
+     formState: { errors },reset
+   } = useForm<Inputs>()
+
+   const onSubmit : SubmitHandler<Inputs> = async(data) =>{
+    toast.success(t("Exito.mensajeExito"),{
+                position:"top-center"
+            })
+    
+    reset()
+   }
+
   return (
     <section className="mb-20 px-5">
       <h2 className="text-lime-400 font-medium text-3xl">{t("titulo")}</h2>
@@ -32,19 +46,70 @@ const SeccionContacto = () => {
 
         {/* Formulario */}
         <div className="w-full lg:w-2/3 ">
-          <form className="w-full">
+          <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Input placeholder={t("Formulario.labelNombre")} className="mt-3 flex-1" />
-              <Input placeholder={t("Formulario.labelTelefono")} className="mt-3 flex-1" />
+              <div className='w-full'>
+              <Input placeholder={t("Formulario.labelNombre")} {...register('nombre', { required: true })} className="mt-3 flex-1" />
+              {
+                  errors.nombre && 
+                    <Alert variant="destructive" className='mt-2'>
+                      <AlertDescription>
+                        {t("Error.errorNombre")}
+                      </AlertDescription>
+                    </Alert>
+                }
+                </div>
+                <div  className='w-full'>
+              <Input placeholder={t("Formulario.labelTelefono")} type='number' {...register('telefono', { required: true })} className="mt-3 flex-1" />
+              {
+                  errors.telefono && 
+                    <Alert variant="destructive" className='mt-2'>
+                      <AlertDescription>
+                        {t("Error.errorTelefono")}
+                      </AlertDescription>
+                    </Alert>
+                }
+                </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Input type="email" placeholder={t("Formulario.labelCorreo")} className="mt-3 flex-1" />
-              <Input placeholder={t("Formulario.labelAsunto")} className="mt-3 flex-1" />
+              <div className='w-full'>
+                <Input type="email" placeholder={t("Formulario.labelCorreo")} {...register('correo', { required: true })} className="mt-3 flex-1" />
+                {
+                    errors.correo && 
+                      <Alert variant="destructive" className='mt-2'>
+                        <AlertDescription>
+                          {t("Error.errorCorreo")}
+                        </AlertDescription>
+                      </Alert>
+                  }
+                </div>
+                <div className='w-full'>
+
+                
+              <Input placeholder={t("Formulario.labelAsunto")} {...register('asunto', { required: true })} className="mt-3 flex-1" />
+                {
+                    errors.asunto && 
+                      <Alert variant="destructive" className='mt-2'>
+                        <AlertDescription>
+                          {t("Error.errorAsunto")}
+                        </AlertDescription>
+                      </Alert>
+                  }
+                </div>
             </div>
 
-            <Textarea placeholder={t("Formulario.labelMensaje")} className="mt-3 min-h-[150px]" />
-            <Button className="mt-5 w-full sm:w-auto">{t("Formulario.boton")}</Button>
+            <Textarea placeholder={t("Formulario.labelMensaje")} {...register('mensaje', { required: true })} className="mt-3 min-h-[150px]"/>
+            {
+                  errors.asunto && 
+                    <Alert variant="destructive" className='mt-2'>
+                      <AlertDescription>
+                        {t("Error.errorAsunto")}
+                      </AlertDescription>
+                    </Alert>
+                }
+            <Button type="submit" className="mt-5 w-full sm:w-auto cursor-pointer">{t("Formulario.boton")}</Button>
+           
           </form>
         </div>
 

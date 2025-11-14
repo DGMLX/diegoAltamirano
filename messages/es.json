@@ -130,6 +130,16 @@
             "numero":"Número de contacto",
             "email":"Email",
             "ubicacion":"Ubicación"
+        },
+        "Error":{
+            "errorNombre":"El nombre es obligatorio",
+            "errorTelefono":"El teléfono es obligatorio",
+            "errorCorreo":"El correo es obligatorio",
+            "errorAsunto":"El campo asunto es obligatorio",
+            "errorMensaje":"El mensaje es obligatorio"
+        },
+        "Exito":{
+            "mensajeExito":"El mensaje se envio correctamente"
         }
     },
     "Idiomas":{

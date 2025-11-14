@@ -24,16 +24,16 @@ export function AppSidebar() {
         <p className=" mt-10 ">{t("descripcion")}</p>
         <div className="mt-10">
 
-          <h4 className="text-zinc-400 text-xl">{t("numeroContacto")}</h4>
+          <h4 className="text-zinc-500 text-xl">{t("numeroContacto")}</h4>
           <p className="text-gray-600 text-lg">+569 54714609</p>
 
-          <h4 className="text-zinc-400 text-xl mt-4">Email</h4>
+          <h4 className="text-zinc-500 text-xl mt-4">Email</h4>
           <p className="text-gray-600 text-lg">diegoaltdev@gmail.com</p>
 
-          <h4 className="text-zinc-400 text-xl mt-4">{t("ubicacion")}</h4>
+          <h4 className="text-zinc-500 text-xl mt-4">{t("ubicacion")}</h4>
           <p className="text-gray-600 text-lg">Chile - Viña del mar</p>
 
-          <h4 className="text-zinc-400 text-xl mt-4">{t("redes")}</h4>
+          <h4 className="text-zinc-500 text-xl mt-4">{t("redes")}</h4>
           <div className="flex  gap-5 mt-2">
 
           <Link href={"https://github.com/DGMLX"} target='_blank'><FaGithub className="text-xl cursor-pointer hover:text-lime-400 transition-all duration-400"/></Link>

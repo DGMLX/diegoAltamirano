@@ -46,7 +46,7 @@ const SeccionProyectos = () => {
 
           <div className="mt-8 lg:mt-0 lg:ml-10 flex-col flex justify-between w-full lg:w-1/2">
             <h2 className="text-2xl font-semibold text-center lg:text-left mb-2">Lexify AI</h2>
-            <p className="text-zinc-400 text-md text-center lg:text-left mb-6">{t("descripcion")}</p>
+            <p className="text-primary text-md text-center lg:text-left mb-6">{t("descripcion")}</p>
 
             {/* Tecnologías */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
@@ -146,9 +146,9 @@ const SeccionProyectos = () => {
               />
             </div>
 
-            <p className="text-center mt-4 text-lime-500">{proyecto.fecha}</p>
+            <p className="text-center mt-4 text-lime-700">{proyecto.fecha}</p>
             <h4 className="text-xl text-center  mt-2 font-bold">{proyecto.titulo}</h4>
-            <p className="text-center my-6 text-zinc-400 flex-grow">{proyecto.descripcion}</p>
+            <p className="text-center my-6 text-primary flex-grow">{proyecto.descripcion}</p>
 
             <div className="mt-auto">
               <Button asChild className="w-full">

@@ -129,7 +129,18 @@
     "numero": "Contact Number",
     "email": "Email",
     "ubicacion": "Location"
-  }
+  },
+  "Error": {
+    "errorNombre": "Name is required",
+    "errorTelefono": "Phone number is required",
+    "errorCorreo": "Email is required",
+    "errorAsunto": "Subject field is required",
+    "errorMensaje": "Message is required"
+},
+"Exito": {
+    "mensajeExito": "Message sent successfully"
+}
+
 },
   "Idiomas":{
       "idioma":"Language",

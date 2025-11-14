@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/AppSidebar";
 import {NextIntlClientProvider} from 'next-intl';
-
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +56,7 @@ export default function RootLayout({
               <div className="flex flex-col w-full">
                 <Navbar />
               {children}
+              <Toaster />
               </div>
             </SidebarProvider>
           </NextIntlClientProvider>
