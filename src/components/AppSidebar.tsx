@@ -19,8 +19,14 @@ export function AppSidebar() {
   const x = useTranslations("Navbar")
   const { toggleSidebar } = useSidebar()
 
-   const handleNavigate = () => {
+   const handleNavigate = (id:string) => {
     toggleSidebar() 
+      setTimeout(() => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }, 300)
   }
   return (
     <Sidebar>
@@ -77,15 +83,11 @@ export function AppSidebar() {
       </SidebarHeader>
 
       <SidebarContent className="px-5 flex flex-col md:hidden mt-10">      
-        <Link href={"/#"} onClick={handleNavigate}>{x("sobreMi")}</Link>
-        <hr />
-        <Link href={"/#trayectoria"} onClick={handleNavigate}>{x("trayectoria")}</Link>
-        <hr />
-        <Link href={"/#servicios"} onClick={handleNavigate}>{x("servicios")}</Link>
-        <hr />
-        <Link href={"/#proyectos"} onClick={handleNavigate}>{x("proyectosRealizados")}</Link>
-        <hr />
-        <Link href={"/#contacto"} onClick={handleNavigate}>{x("contacto")}</Link>
+        <Link href={"/#"} onClick={() => handleNavigate("")}>{x("sobreMi")}</Link>
+        <Link href={"/#trayectoria"} onClick={() => handleNavigate("trayectoria")}>{x("trayectoria")}</Link>
+        <Link href={"/#servicios"} onClick={() => handleNavigate("servicios")}>{x("servicios")}</Link>
+        <Link href={"/#proyectos"} onClick={() => handleNavigate("proyectos")}>{x("proyectosRealizados")}</Link>
+        <Link href={"/#contacto"} onClick={() => handleNavigate("contacto")}>{x("contacto")}</Link>
       </SidebarContent>
       <SidebarFooter className="block md:hidden">
         <div className=" flex justify-center mb-10 gap-3 pr-5  items-center">
