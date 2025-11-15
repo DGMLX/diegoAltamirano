@@ -1,9 +1,12 @@
+'use client'
+
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
   SidebarHeader,
+  useSidebar,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 import { FaCode, FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa"
@@ -14,6 +17,11 @@ import { useTranslations } from "next-intl"
 export function AppSidebar() {
   const t = useTranslations("Sidebar")
   const x = useTranslations("Navbar")
+  const { toggleSidebar } = useSidebar()
+
+   const handleNavigate = () => {
+    toggleSidebar() 
+  }
   return (
     <Sidebar>
       <SidebarHeader className="hidden md:block">
@@ -67,16 +75,17 @@ export function AppSidebar() {
         </div>
         <hr/>
       </SidebarHeader>
+
       <SidebarContent className="px-5 flex flex-col md:hidden mt-10">      
-         <Link href={"/#"} className="hover:translate-x-3   transition-all duration-400">{x("sobreMi")}</Link>
-         <hr />
-          <Link href={"/#trayectoria"} className="hover:translate-x-3 transition-all duration-400">{x("trayectoria")}</Link>
-          <hr />
-          <Link href={"/#servicios"} className="hover:translate-x-3  transition-all duration-400">{x("servicios")}</Link>
-          <hr />
-          <Link href={"/#proyectos"} className="hover:translate-x-3  transition-all duration-400">{x("proyectosRealizados")}</Link>
-          <hr />
-          <Link href={"/#contacto"} className="hover:translate-x-3 transition-all duration-400">{x("contacto")}</Link>
+        <Link href={"/#"} onClick={handleNavigate}>{x("sobreMi")}</Link>
+        <hr />
+        <Link href={"/#trayectoria"} onClick={handleNavigate}>{x("trayectoria")}</Link>
+        <hr />
+        <Link href={"/#servicios"} onClick={handleNavigate}>{x("servicios")}</Link>
+        <hr />
+        <Link href={"/#proyectos"} onClick={handleNavigate}>{x("proyectosRealizados")}</Link>
+        <hr />
+        <Link href={"/#contacto"} onClick={handleNavigate}>{x("contacto")}</Link>
       </SidebarContent>
       <SidebarFooter className="block md:hidden">
         <div className=" flex justify-center mb-10 gap-3 pr-5  items-center">
