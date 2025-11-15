@@ -83,20 +83,6 @@ export function AppSidebar() {
     <Link href={"https://github.com/DGMLX"} target='_blank'><FaGithub className="text-xl cursor-pointer hover:text-lime-400 transition-all duration-400"/></Link>
     <Link href={"https://www.linkedin.com/in/diego-altamirano-gallardo-72a7a2203/"} target='_blank'><FaLinkedinIn className="text-xl cursor-pointer hover:text-lime-400 transition-all duration-400"/></Link>
 
-    <Tooltip>
-      <TooltipTrigger>   <SiGmail className="text-xl hover:text-lime-400 transition-all duration-400"/></TooltipTrigger>
-      <TooltipContent>
-        <p>diegoaltdev@gmail.com</p>
-      </TooltipContent>
-    </Tooltip>
-
-    
-    <Tooltip>
-      <TooltipTrigger> <FaWhatsapp className="text-xl hover:text-lime-400 transition-all duration-400"/></TooltipTrigger>
-      <TooltipContent>
-        <p>+569 54714609</p>
-      </TooltipContent>
-    </Tooltip>
   
    
   </div>
