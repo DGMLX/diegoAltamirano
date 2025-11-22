@@ -1,17 +1,24 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { BsArrowUpRight } from 'react-icons/bs'
-import { FaLaptopCode, FaRegEye } from 'react-icons/fa'
-import { GrProjects } from 'react-icons/gr'
+import { FaLaptopCode } from 'react-icons/fa'
 import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl'
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { GrProjects } from "react-icons/gr";
+import { FaChevronLeft, FaChevronRight, FaRegEye } from "react-icons/fa";
+import { useRef } from "react";
+import 'swiper/css';
+import type { Swiper as SwiperType } from "swiper";
 
 const SeccionProyectos = () => {
   const t = useTranslations("ProyectoActual")
   const x = useTranslations("ProyectosRealizados")
-
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <>
       {/* PROYECTO ACTUAL */}
@@ -97,74 +104,214 @@ const SeccionProyectos = () => {
         <GrProjects className="text-lime-600 text-3xl mr-3" />
         {x("titulo")}
       </h3>
+
       <p className="text-center text-lime-600 mt-2">{x("subtitulo")}</p>
 
-      {/* Sección con alturas iguales */}
-      <section
-        className="mb-20 mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-fr"
-      >
-        {[
-          {
-            img: "/proyectos/nutrihome.png",
-            alt: "nutricion homepage",
-            link: "https://proyecto-nutricion-ia.vercel.app/",
-            fecha: x("Proyectos.proyecto1.fecha"),
-            titulo: x("Proyectos.proyecto1.titulo"),
-            descripcion: x("Proyectos.proyecto1.descripcion"),
-            boton: x("Proyectos.proyecto1.boton"),
-          },
-          {
-            img: "/proyectos/adminhome.png",
-            alt: "admin homepage",
-            link: "https://admin-comunity.vercel.app/",
-            fecha: x("Proyectos.proyecto2.fecha"),
-            titulo: x("Proyectos.proyecto2.titulo"),
-            descripcion: x("Proyectos.proyecto2.descripcion"),
-            boton: x("Proyectos.proyecto2.boton"),
-          },
-          {
-            img: "/proyectos/shadcn-nextjs.png",
-            alt: "shadcn nextjs homepage",
-            link: "https://nextjs-shadcn-black.vercel.app/",
-            fecha: x("Proyectos.proyecto3.fecha"),
-            titulo: x("Proyectos.proyecto3.titulo"),
-            descripcion: x("Proyectos.proyecto3.descripcion"),
-            boton: x("Proyectos.proyecto3.boton"),
-          },
-        ].map((proyecto, i) => (
-          <div
-            key={i}
-            className="bg-primary-foreground pt-4 pb-5 rounded-xl border border-zinc-600 px-4 flex flex-col h-full"
-          >
-            <div className="overflow-hidden rounded-lg">
-              <Image
-                src={proyecto.img}
-                width={600}
-                height={600}
-                alt={proyecto.alt}
-                className="rounded-lg hover:scale-110 transition-all duration-300 w-full"
-              />
-            </div>
+      {/* Contenedor con flechas e indicador */}
+      <div className="relative mt-10 mb-20">
 
-            <p className="text-center mt-4 text-lime-600">{proyecto.fecha}</p>
-            <h4 className="text-xl text-center  mt-2 font-bold">{proyecto.titulo}</h4>
-            <p className="text-center my-6 text-primary flex-grow">{proyecto.descripcion}</p>
+        {/* Flecha izquierda (solo móvil/tablet) */}
+        <FaChevronLeft onClick={() => swiperRef.current?.slidePrev()} className="cursor-pointer absolute -left-6 md:-left-10 top-1/2 -translate-y-1/2 z-20 text-lime-500 text-3xl  animate-pulse" />
 
-            <div className="mt-auto">
-              <Button asChild className="w-full">
-                <Link
-                  href={proyecto.link}
-                  target="_blank"
-                  className="py-2 rounded-xl w-full flex justify-center items-center hover:bg-zinc-300 cursor-pointer"
-                >
-                  <FaRegEye className="mr-3 text-xl" />
-                  {proyecto.boton}
-                </Link>
-              </Button>
-            </div>
-          </div>
-        ))}
-      </section>
+        <Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          spaceBetween={30}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="cursor-grab"
+        >
+          {[
+            {
+              img: "/proyectos/nutrihome.png",
+              alt: "nutricion homepage",
+              link: "https://proyecto-nutricion-ia.vercel.app/",
+              fecha: x("Proyectos.proyecto1.fecha"),
+              titulo: x("Proyectos.proyecto1.titulo"),
+              descripcion: x("Proyectos.proyecto1.descripcion"),
+              boton: x("Proyectos.proyecto1.boton"),
+            },
+            {
+              img: "/proyectos/img-ecoalliance.png",
+              alt: "ecoalliance homepage",
+              link: "https://landing-eax.vercel.app/eliet",
+              fecha: x("Proyectos.proyecto2.fecha"),
+              titulo: x("Proyectos.proyecto2.titulo"),
+              descripcion: x("Proyectos.proyecto2.descripcion"),
+              boton: x("Proyectos.proyecto2.boton"),
+            },
+            {
+              img: "/proyectos/shadcn-nextjs.png",
+              alt: "shadcn nextjs homepage",
+              link: "https://nextjs-shadcn-black.vercel.app/",
+              fecha: x("Proyectos.proyecto3.fecha"),
+              titulo: x("Proyectos.proyecto3.titulo"),
+              descripcion: x("Proyectos.proyecto3.descripcion"),
+              boton: x("Proyectos.proyecto3.boton"),
+            },
+            {
+              img: "/proyectos/img-gyg.png",
+              alt: "gyg homepage",
+              link: "https://arriendodecamionesplumagyg.cl/",
+              fecha: x("Proyectos.proyecto4.fecha"),
+              titulo: x("Proyectos.proyecto4.titulo"),
+              descripcion: x("Proyectos.proyecto4.descripcion"),
+              boton: x("Proyectos.proyecto4.boton"),
+            },
+            {
+              img: "/proyectos/proyecto-aridos.png",
+              alt: "aridos homepage",
+              link: "https://www.aridosquintaregion.cl/",
+              fecha: x("Proyectos.proyecto5.fecha"),
+              titulo: x("Proyectos.proyecto5.titulo"),
+              descripcion: x("Proyectos.proyecto5.descripcion"),
+              boton: x("Proyectos.proyecto5.boton"),
+            },
+            {
+              img: "/proyectos/teslo.png",
+              alt: "teslo homepage",
+              link: "",
+              fecha: x("Proyectos.proyecto6.fecha"),
+              titulo: x("Proyectos.proyecto6.titulo"),
+              descripcion: x("Proyectos.proyecto6.descripcion"),
+              boton: x("Proyectos.proyecto6.boton"),
+            },
+            {
+              img: "/proyectos/adminhome.png",
+              alt: "admin homepage",
+              link: "https://admin-comunity.vercel.app/",
+              fecha: x("Proyectos.proyecto7.fecha"),
+              titulo: x("Proyectos.proyecto7.titulo"),
+              descripcion: x("Proyectos.proyecto7.descripcion"),
+              boton: x("Proyectos.proyecto7.boton"),
+            },
+            {
+              img: "/proyectos/mecanica-template.png",
+              alt: "mecanica template homepage",
+              link: "",
+              fecha: x("Proyectos.proyecto8.fecha"),
+              titulo: x("Proyectos.proyecto8.titulo"),
+              descripcion: x("Proyectos.proyecto8.descripcion"),
+              boton: x("Proyectos.proyecto8.boton"),
+            },
+            {
+              img: "/proyectos/basket-template.png",
+              alt: "basket template homepage",
+              link: "https://basket-tawny.vercel.app/",
+              fecha: x("Proyectos.proyecto9.fecha"),
+              titulo: x("Proyectos.proyecto9.titulo"),
+              descripcion: x("Proyectos.proyecto9.descripcion"),
+              boton: x("Proyectos.proyecto9.boton"),
+            },
+            {
+              img: "/proyectos/admin-gastos.png",
+              alt: "admin gastos homepage",
+              link: "https://dgmlx.github.io/administrador-gastos/",
+              fecha: x("Proyectos.proyecto10.fecha"),
+              titulo: x("Proyectos.proyecto10.titulo"),
+              descripcion: x("Proyectos.proyecto10.descripcion"),
+              boton: x("Proyectos.proyecto10.boton"),
+            },
+            {
+              img: "/proyectos/crypto.png",
+              alt: "crypto homepage",
+              link: "https://dgmlx.github.io/cryptoProyect/",
+              fecha: x("Proyectos.proyecto11.fecha"),
+              titulo: x("Proyectos.proyecto11.titulo"),
+              descripcion: x("Proyectos.proyecto11.descripcion"),
+              boton: x("Proyectos.proyecto11.boton"),
+            },
+            {
+              img: "/proyectos/buscador_autos.png",
+              alt: "buscador autos homepage",
+              link: "https://dgmlx.github.io/buscador-autos/",
+              fecha: x("Proyectos.proyecto12.fecha"),
+              titulo: x("Proyectos.proyecto12.titulo"),
+              descripcion: x("Proyectos.proyecto12.descripcion"),
+              boton: x("Proyectos.proyecto12.boton"),
+            },
+            {
+              img: "/proyectos/interminable.png",
+              alt: "interminable homepage",
+              link: "https://dgmlx.github.io/Proyecto-uno-curso-hojas-de-estilos/",
+              fecha: x("Proyectos.proyecto13.fecha"),
+              titulo: x("Proyectos.proyecto13.titulo"),
+              descripcion: x("Proyectos.proyecto13.descripcion"),
+              boton: x("Proyectos.proyecto13.boton"),
+            },
+            {
+              img: "/proyectos/rufus.png",
+              alt: "rufus homepage",
+              link: "https://dgmlx.github.io/proyecto-rufus/",
+              fecha: x("Proyectos.proyecto14.fecha"),
+              titulo: x("Proyectos.proyecto14.titulo"),
+              descripcion: x("Proyectos.proyecto14.descripcion"),
+              boton: x("Proyectos.proyecto14.boton"),
+            },
+            {
+              img: "/proyectos/carrito.png",
+              alt: "carrito homepage",
+              link: "https://dgmlx.github.io/curso-carrito/",
+              fecha: x("Proyectos.proyecto15.fecha"),
+              titulo: x("Proyectos.proyecto15.titulo"),
+              descripcion: x("Proyectos.proyecto15.descripcion"),
+              boton: x("Proyectos.proyecto15.boton"),
+            },
+          ].map((proyecto, i) => (
+            <SwiperSlide key={i} className="!h-auto">
+              <div className="
+      bg-primary-foreground 
+      rounded-xl 
+      border border-zinc-600 
+      p-4 
+      flex flex-col 
+      h-full 
+      min-h-[600px]   
+    "
+              >
+                <div className="overflow-hidden rounded-lg">
+                  <Image
+                    src={proyecto.img}
+                    width={600}
+                    height={600}
+                    alt={proyecto.alt}
+                    className="rounded-lg hover:scale-110 transition-all duration-300 w-full"
+                  />
+                </div>
+
+                <h4 className="text-xl text-center mt-2 font-bold">
+                  {proyecto.titulo}
+                </h4>
+
+                <p className="text-center my-6 text-primary flex-grow">
+                  {proyecto.descripcion}
+                </p>
+
+                <div className="mt-auto">
+                  <Button asChild className="w-full">
+                    <Link
+                      href={proyecto.link}
+                      target="_blank"
+                      className="py-2 rounded-xl w-full flex justify-center items-center hover:bg-zinc-300 cursor-pointer"
+                    >
+                      <FaRegEye className="mr-3 text-xl" />
+                      {proyecto.boton}
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </SwiperSlide>
+
+          ))}
+        </Swiper >
+
+        {/* Flecha derecha */}
+        < FaChevronRight onClick={() => swiperRef.current?.slideNext()} className="cursor-pointer absolute -right-6 md:-right-10 top-1/2 -translate-y-1/2 z-20 text-lime-500 text-3xl  animate-pulse" />
+
+      </div >
+
     </>
   )
 }
