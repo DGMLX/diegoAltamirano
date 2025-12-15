@@ -30,7 +30,7 @@ const SeccionInvestigaciones = () => {
         <div className=" space-y-4">
           <p><span className="text-pink-600 font-bold">{'>'}</span> {t("item1")}</p>
           <p><span className="text-pink-600 font-bold">{'>'}</span> {t("item2")}</p>
-          <p><span className="text-pink-600 font-bold">{'>'}</span> {t("item3")}</p>
+          {/* <p><span className="text-pink-600 font-bold">{'>'}</span> {t("item3")}</p> */}
           <p><span className="text-pink-600 font-bold">{'>'}</span> {t("item4")}</p>
           <p><span className="text-pink-600 font-bold">{'>'}</span> {t("item5")}</p>
         </div>
@@ -63,14 +63,14 @@ const SeccionInvestigaciones = () => {
             </TooltipContent>
           </Tooltip>
 
-          <Tooltip>
+          {/* <Tooltip>
             <TooltipTrigger>
               <Image src={"/tech/N8N.png"} alt="logo n8n" className="rounded-full" width={60} height={60} />
             </TooltipTrigger>
             <TooltipContent>
               <p>N8N</p>
             </TooltipContent>
-          </Tooltip>
+          </Tooltip> */}
         </div>
 
         <CircleAnimation />
